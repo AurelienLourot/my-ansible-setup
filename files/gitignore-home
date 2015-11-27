@@ -25,9 +25,11 @@
 /.local/share/recently-used.xbel
 /.local/share/spotify
 /.local/share/Trash
+/.local/share/unity-webapps
 /.local/share/Zeal
 /.local/share/zeitgeist
 /.macromedia
+/.mozilla/firefox
 /.msjnc.log
 /.p4tickets
 /.pulse
