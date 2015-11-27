@@ -1,0 +1,3 @@
+---
+dependencies:
+  - role: add-apt-partner-source

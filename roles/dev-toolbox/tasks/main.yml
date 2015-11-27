@@ -1,0 +1,102 @@
+---
+- name: Install text editors via APT
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - kwrite
+    - emacs
+    - gedit
+
+- name: Install coding tools via APT
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - kompare
+    - kdiff3
+    - pandoc
+
+- name: Install SCM clients via APT
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - mercurial
+    - subversion
+
+- name: Install interpreters via APT
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - rhino
+    - groovy
+    - python-dev
+
+- name: Install network clients via APT
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - gftp
+    - telnet
+    - sshpass
+    - mtr
+
+- name: Install shell tools via APT
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - trash-cli
+    - mc
+    - pv
+    - bash-completion
+    - lib32ncurses5
+    - pdfgrep
+
+- name: Install system tools via APT
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - apt-file
+    - locate
+    - lsof
+    - htop
+    - moreutils
+
+- name: Install npm via APT
+  apt:
+    name: npm
+  become: yes
+  become_method: sudo
+  when: npm_is_from_apt
+
+- name: Install other APT packages
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - ia32-libs
+    - gmrun
+    - mcrypt
+    - maven2
+    - mongodb
+    - mysql-client
+
+- name: "Add source line to bashrc"
+  lineinfile:
+    dest: "{{ main_bashrc_on_host }}"
+    line: "source ${ansibleInventoryDir}/files/bashrc # uuidgen-79cb621e-49f4-4662-bd6c-518e97ae97cb"
+    regexp: uuidgen-79cb621e-49f4-4662-bd6c-518e97ae97cb
+    insertafter: uuidgen-20ce84f6-6313-4d61-8641-245c42741ffb

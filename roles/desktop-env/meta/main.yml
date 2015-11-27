@@ -1,0 +1,87 @@
+---
+dependencies:
+  - role: create-symlink
+    link_name: .xinitrc
+    link_path: "{{ lookup('env', 'HOME') }}"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/xinitrc"
+
+  - role: create-symlink
+    link_name: start_icon.png
+    link_path: "{{ lookup('env', 'HOME') }}/.local/share/configurelinux"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/start_icon.png"
+
+  - role: create-symlink
+    link_name: autostart.desktop
+    link_path: "{{ lookup('env', 'HOME') }}/.config/autostart"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/autostart.desktop"
+
+  #FIXME: a 'with_items' loop would be better, however not trivial with roles:
+  - role: create-symlink
+    link_name: libfm
+    link_path: "{{ lookup('env', 'HOME') }}/.config"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/libfm"
+  - role: create-symlink
+    link_name: pcmanfm
+    link_path: "{{ lookup('env', 'HOME') }}/.config"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/pcmanfm"
+  - role: create-symlink
+    link_name: lxpanel
+    link_path: "{{ lookup('env', 'HOME') }}/.config"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/lxpanel"
+  - role: create-symlink
+    link_name: lxterminal
+    link_path: "{{ lookup('env', 'HOME') }}/.config"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/lxterminal"
+  - role: create-symlink
+    link_name: openbox
+    link_path: "{{ lookup('env', 'HOME') }}/.config"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/openbox"
+
+  - role: create-symlink
+    link_name: lightdm-gtk-greeter-config-derivative
+    link_path: /etc/alternatives/
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/lightdm-gtk-greeter-config-derivative"
+    with_sudo: yes
+
+  - role: create-symlink
+    link_name: locale
+    link_path: /etc/default/
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/locale"
+    with_sudo: yes
+
+  - role: create-symlink
+    link_name: autostart.sh
+    # See autostart.desktop why we can't put this file in ~/bin :
+    link_path: "/usr/local/bin"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/autostart.sh"
+    with_sudo: yes
+
+  - role: create-symlink
+    link_name: purgetrash.sh
+    link_path: "/usr/local/bin"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/purgetrash.sh"
+    with_sudo: yes

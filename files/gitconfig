@@ -1,0 +1,42 @@
+[user]
+        name = Aurelien Lourot
+        email = (none)
+
+[format]
+        subjectprefix = PATCH
+        suffix = .txt
+        numbered = auto
+
+[alias]
+        co = checkout
+        ci = commit -s
+        lol = log --graph --decorate --pretty=oneline --abbrev-commit
+        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+        rpupdate = remote update --prune
+        confemailhome = config user.email "aurelien.lourot@gmail.com"
+        confemailwork = config user.email "aurelien.lourot@tomtom.com"
+
+[color]
+        ui = true
+
+[diff]
+        renamelimit = 5000
+
+[merge]
+        tool = kdiff3
+
+[git-p4]
+        detectRename = true
+        allowSubmit = master
+
+[core]
+        whitespace = trailing-space,space-before-tab
+
+[credential]
+        helper = cache --timeout=31536000
+
+[receive]
+        denyCurrentBranch = updateInstead
+
+[push]
+        default = simple

@@ -1,0 +1,58 @@
+---
+- name: "Set {{ link_name }} full path"
+  set_fact:
+    link: "{{ link_path }}/{{ link_name }}"
+
+- name: "Set {{ link_name }} backup full path"
+  set_fact:
+    backup_fullpath: "{{ link }}.old"
+
+- name: "Make {{ link_name }} dir"
+  file:
+    path: "{{ link_path }}"
+    state: directory
+
+- name: "Stat {{ link_name }}"
+  stat:
+    path: "{{ link }}"
+    follow: True
+  register: orig_file
+
+- name: "Stat {{ link_name }} backup"
+  stat:
+    path: "{{ backup_fullpath }}"
+  register: backup_file
+
+#TODO: instead of making a backup ourselves, implement a 'backup' option in
+#      ansible-modules-core/files/file.py like in copy.py .
+#FIXME: I can't get 'become: "{{ with_sudo | bool }}"' to work, that's why it's all duplicated here:
+- name: "Backup {{ link_name }}"
+  copy:
+    src: "{{ link }}"
+    dest: "{{ backup_fullpath }}"
+    follow: yes
+  when: with_sudo|bool == False and backup|bool and orig_file.stat.exists and backup_file.stat.exists == False
+- name: "Backup {{ link_name }}"
+  copy:
+    src: "{{ link }}"
+    dest: "{{ backup_fullpath }}"
+    follow: yes
+  when: with_sudo|bool and backup|bool and orig_file.stat.exists and backup_file.stat.exists == False
+  become: yes
+  become_method: sudo
+- name: "Link {{ link_name }}"
+  file:
+    src: "{{ target }}"
+    path: "{{ link }}"
+    force: yes # in case there is already a file in place (which we have backed up just before)
+    state: link
+  when: with_sudo|bool == False
+- name: "Link {{ link_name }}"
+  file:
+    src: "{{ target }}"
+    path: "{{ link }}"
+    force: yes # in case there is already a file in place (which we have backed up just before)
+    state: link
+  when: with_sudo|bool
+  become: yes
+  become_method: sudo

@@ -1,0 +1,12 @@
+---
+# Generic role similar to 'lineinfile' task, but when inserting the line, inserts an empty line
+# first.
+#
+# args:
+#   dest: see 'lineinfile'
+#   dest_description: short description of 'dest'
+#   line: see 'lineinfile'
+#   line_description: short description of 'line'
+#   regexp: see 'lineinfile'
+
+allow_duplicates: True

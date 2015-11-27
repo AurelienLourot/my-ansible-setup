@@ -1,0 +1,23 @@
+---
+- name: Add APT source for avidemux
+  apt_repository:
+    repo: deb http://archive.ubuntu.com/ubuntu/ precise main restricted universe multiverse
+  become: yes
+  become_method: sudo
+
+- name: Install APT packages
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - avidemux
+    - vlc
+    - transcode
+    - kolourpaint4
+    - gwenview
+    - imagemagick
+    - ksnapshot
+    - gimp
+    - calibre
+    - audacity

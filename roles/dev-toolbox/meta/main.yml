@@ -1,0 +1,71 @@
+---
+dependencies:
+  - role: git-client
+  - role: adb-client
+    when: adb_is_from_ppa
+
+  - role: create-symlink
+    link_name: kwriterc
+    link_path: "{{ lookup('env', 'HOME') }}/.kde/share/config/"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/kwriterc"
+
+  - role: line-in-file
+    dest: "{{ main_bashrc_on_host }}"
+    dest_description: bashrc
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    line: "ansibleInventoryDir={{ inventory_dir }} # uuidgen-20ce84f6-6313-4d61-8641-245c42741ffb"
+    line_description: args
+    regexp: uuidgen-20ce84f6-6313-4d61-8641-245c42741ffb
+
+  - role: line-in-file
+    dest: "{{ main_bashrc_on_host }}"
+    dest_description: bashrc
+    line: "setxkbmap {{ keyboard_map }} # uuidgen-022e9c9d-93b3-43dc-ac34-e7285477b032"
+    line_description: setxkbmap
+    regexp: uuidgen-022e9c9d-93b3-43dc-ac34-e7285477b032
+
+  - role: create-symlink
+    link_name: inputrc
+    link_path: "/etc/"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/inputrc"
+    with_sudo: yes
+
+  - role: create-symlink
+    link_name: .npmrc
+    link_path: "{{ lookup('env', 'HOME') }}"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/npmrc"
+
+  - role: create-symlink
+    link_name: .hgrc
+    link_path: "{{ lookup('env', 'HOME') }}"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/hgrc"
+
+  - role: create-symlink
+    link_name: .xbindkeysrc.scm
+    link_path: "{{ lookup('env', 'HOME') }}"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/xbindkeysrc.scm"
+
+  - role: create-symlink
+    link_name: focusDesktopConsole.py
+    link_path: "{{ lookup('env', 'HOME') }}/bin"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/focusDesktopConsole.py"
+
+  - role: create-symlink
+    link_name: DesktopConsole.ds
+    link_path: "{{ lookup('env', 'HOME') }}/.devilspie"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/DesktopConsole.ds"

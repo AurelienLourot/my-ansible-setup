@@ -1,0 +1,7 @@
+---
+- name: Add all
+  command: "git -C {{ lookup('env', 'HOME') }} add -A"
+  notify:
+    - Commit all
+- name: Commit all
+  command: "git -C {{ lookup('env', 'HOME') }} commit -m ."

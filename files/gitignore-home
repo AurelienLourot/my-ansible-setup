@@ -1,0 +1,106 @@
+/.ansible/tmp
+/.bash_history
+/.cache
+/.config/dconf/user
+/.config/ibus/bus
+/.config/pulse
+/.dbus/session-bus
+/.fontconfig
+/.gksu.lock
+/.gmrun_history
+/.gradle
+/.gstreamer-0.10
+/.IdeaIC15/system
+/.java/.userPrefs/.user*
+/.juniper_networks
+/.kde/cache-localhost
+/.kde/share/apps/gwenview/recentfolders
+/.kde/share/apps/okular/docdata
+/.kde/share/apps/RecentDocuments
+/.kde/socket-localhost
+/.kde/tmp-localhost
+/.lesshst
+/.local/share/gvfs-metadata
+/.local/share/icons
+/.local/share/recently-used.xbel
+/.local/share/spotify
+/.local/share/Trash
+/.local/share/Zeal
+/.local/share/zeitgeist
+/.macromedia
+/.msjnc.log
+/.p4tickets
+/.pulse
+/.rnd
+/.semanticdb
+/.sky2/logs
+/.Skype
+/.ssh/known_hosts
+/.thumbnails
+/.wine
+/.Xauthority
+/.xsession-errors*
+/Calibre Library
+/Downloads
+/Documents
+/My Digital Editions
+/tmp
+/trash
+/VirtualBox VMs
+
+# chromium:
+Application Cache
+Bookmarks
+Cache
+Certificate Revocation Lists
+chrome_shutdown_ms.txt
+Cookies*
+Current Session
+Current Tabs
+databases
+Extension Cookies
+Extension Rules
+Extension State
+Extensions
+Favicons
+Favicons-journal
+File System
+GCM Store
+GPUCache
+History
+History Provider Cache
+History-journal
+IndexedDB
+Last Session
+Last Tabs
+Local App Settings
+Local Extension Settings
+Local State
+Local Storage
+Login Data
+Login Data-journal
+Network Action Predictor
+Network Action Predictor-journal
+Origin Bound Certs
+Origin Bound Certs-journal
+Preferences
+QuotaManager*
+Safe Browsing *
+Service Worker
+Session Storage
+Shortcuts
+Shortcuts-journal
+SingletonCookie
+SingletonLock
+SingletonSocket
+Sync App Settings
+Sync Data
+Sync Extension Settings
+Top Sites
+Top Sites-journal
+TransportSecurity
+Visited Links
+Web Data
+Web Data-journal
+WebRTCIdentityStore
+WebRTCIdentityStore-journal

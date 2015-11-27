@@ -1,0 +1,10 @@
+---
+- name: Install APT packages
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - chromium-browser
+    - firefox
+    - icedtea-plugin

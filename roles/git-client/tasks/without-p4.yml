@@ -1,0 +1,20 @@
+---
+- name: Add APT source for git
+  apt_repository:
+    repo: deb http://ppa.launchpad.net/git-core/ppa/ubuntu precise main
+  become: yes
+  become_method: sudo
+
+- name: Install git
+  apt:
+    name: "{{ item }}"
+    state: latest
+    force: yes # necessary otherwise there is an apt-get option mismatch as we update multiple
+               # packages at once
+  become: yes
+  become_method: sudo
+  with_items:
+    - git
+    - git-man
+    - git-gui
+    - gitk

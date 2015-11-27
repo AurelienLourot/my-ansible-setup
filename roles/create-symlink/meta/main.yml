@@ -1,0 +1,12 @@
+---
+# Generic role for creating a symlink 'link_path/link_name -> target' after having backed up
+# 'target'.
+#
+# args:
+#   link_name
+#   link_path
+#   target
+#   backup: yes by default
+#   with_sudo: no by default
+
+allow_duplicates: True

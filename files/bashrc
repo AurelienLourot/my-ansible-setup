@@ -1,0 +1,41 @@
+# args:
+#   ansibleInventoryDir
+
+HISTSIZE=5000
+export TERM=xterm-256color
+
+alias e='emacsclient.sh'
+alias ee='ee.sh'
+export EDITOR=emacsclient.sh
+
+alias ll='ls -alF'
+
+alias cdd='cd ~/Documents/git/website/'
+alias todo='cat ~/Documents/git/perso/systeme/todo.txt'
+alias spotify='env LC_NUMERIC=en_US.utf8 spotify'
+alias trash='bash ${ansibleInventoryDir}/files/trash.sh'
+alias gitupdate='bash ${ansibleInventoryDir}/files/gitupdate.sh'
+alias homesize='bash ${ansibleInventoryDir}/files/homesize.sh'
+
+alias dock='xrandr --output HDMI2 --rotate right --mode 1920x1200 && xrandr --output eDP1 --mode 1024x768'
+alias undock='xrandr --output eDP1 --mode 1366x768'
+
+# git: 
+function parse_git_branch_and_add_brackets {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
+}
+PS1="\u@\h:\w\$(parse_git_branch_and_add_brackets)\$ "
+# from [https://gist.github.com/616341]
+#TODO: source ~/.git-completion.sh
+
+# Solves chromium input key bug:
+# https://code.google.com/p/chromium/issues/detail?id=360388
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+
+# Solves emacs accent bug:
+# https://bugs.launchpad.net/emacs-snapshot/+bug/1251176
+export XMODIFIERS=''
+
+# User-specific commands:
+export PATH="~/bin:${PATH}"

@@ -1,0 +1,17 @@
+---
+- hosts: all
+  roles:
+    - home-tracker
+    - desktop-env
+    - dev-toolbox
+    - { role: windows-emulator, when: is_windows_emulator }
+    - { role: office-toolbox, when: is_office_toolbox }
+    - { role: multimedia-toolbox, when: is_multimedia_toolbox }
+    - { role: com-toolbox, when: is_com_toolbox }
+    - { role: laptop, when: is_laptop }
+    - extra
+  tasks:
+    - name: "bad: has_spotify and !is_multimedia_toolbox"
+      fail:
+        msg: Inconsistent variables
+      when: has_spotify and is_multimedia_toolbox == False

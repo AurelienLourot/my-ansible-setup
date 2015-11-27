@@ -1,0 +1,4 @@
+[Desktop Entry] 
+Type=Application
+# Note: doesn't work with "~", which is why we couldn't place this script in ~/bin :
+Exec=bash /usr/local/bin/autostart.sh

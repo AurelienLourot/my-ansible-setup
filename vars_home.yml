@@ -1,0 +1,12 @@
+---
+git_has_p4: False
+adb_is_from_ppa: True
+is_multimedia_toolbox: True
+has_spotify: True
+keyboard_map: de
+is_windows_emulator: True
+has_lubuntu_desktop: True
+is_office_toolbox: True
+is_com_toolbox: True
+is_laptop: True
+npm_is_from_apt: False

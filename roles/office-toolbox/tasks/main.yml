@@ -1,0 +1,12 @@
+---
+- name: Install APT packages
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - libreoffice
+    - kcalc
+    - okular
+    - acroread
+    - kontact

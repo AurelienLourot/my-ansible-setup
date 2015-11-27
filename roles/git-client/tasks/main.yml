@@ -1,0 +1,6 @@
+---
+- include: without-p4.yml
+  when: git_has_p4 == False
+
+- include: with-p4.yml
+  when: git_has_p4

@@ -1,0 +1,4 @@
+---
+dependencies:
+  - role: spotify-client
+    when: has_spotify

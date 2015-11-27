@@ -1,0 +1,12 @@
+---
+- name: Add APT source for adb
+  apt_repository:
+    repo: deb http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu precise main
+  become: yes
+  become_method: sudo
+
+- name: Install APT package
+  apt:
+    name: android-tools-adb
+  become: yes
+  become_method: sudo

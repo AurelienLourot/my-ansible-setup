@@ -1,0 +1,19 @@
+---
+- name: Install lubuntu-desktop via APT
+  apt:
+    name: lubuntu-desktop
+  become: yes
+  become_method: sudo
+  when: has_lubuntu_desktop
+
+- name: Install other APT packages
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - gnome-control-center
+    - xscreensaver
+    - devilspie
+    - xdotool
+    - wmctrl

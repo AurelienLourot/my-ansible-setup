@@ -1,0 +1,6 @@
+---
+- name: Install APT package
+  apt:
+    name: skype
+  become: yes
+  become_method: sudo

@@ -1,0 +1,18 @@
+---
+- name: "Add {{ line_description }} to {{ dest_description }}"
+  lineinfile:
+    dest: "{{ dest }}"
+    line: "{{ line }}"
+    regexp: "{{ regexp }}"
+  register: add_line
+
+#FIXME: This will re-insert an empty line each time the previous task changes the line. We need to
+#       extend 'lineinfile' to deliver the info whether a line has been inserted for the first time
+#       or just changed.
+- name: "Insert empty line before {{ line_description }} in {{ dest_description }}"
+  lineinfile:
+    dest: "{{ dest }}"
+    line: ""
+    regexp: "uuidgen-30405a80-da3e-4bf1-8f44-080e343f8235" # will never match anything
+    insertbefore: "{{ regexp }}"
+  when: add_line.changed
