@@ -1,8 +1,10 @@
 /.ansible/tmp
 /.bash_history
 /.cache
+/.compiz/session
 /.config/dconf/user
 /.config/ibus/bus
+/.config/libreoffice/4/user/uno_packages/cache
 /.config/pulse
 /.dbus/session-bus
 /.fontconfig
@@ -10,6 +12,7 @@
 /.gmrun_history
 /.gradle
 /.gstreamer-0.10
+/.ICEauthority
 /.IdeaIC15/system
 /.java/.userPrefs/.user*
 /.juniper_networks
@@ -21,7 +24,9 @@
 /.kde/tmp-localhost
 /.lesshst
 /.local/share/gvfs-metadata
+/.local/share/icc
 /.local/share/icons
+/.local/share/keyrings
 /.local/share/recently-used.xbel
 /.local/share/spotify
 /.local/share/Trash
@@ -31,6 +36,7 @@
 /.macromedia
 /.mozilla/firefox
 /.msjnc.log
+/.nv/GLCache
 /.p4tickets
 /.pulse
 /.rnd
@@ -52,7 +58,7 @@
 
 # chromium:
 Application Cache
-Bookmarks
+Bookmarks*
 Cache
 Certificate Revocation Lists
 chrome_shutdown_ms.txt
