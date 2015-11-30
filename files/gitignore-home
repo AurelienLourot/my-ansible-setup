@@ -45,6 +45,7 @@
 /.Skype
 /.ssh/known_hosts
 /.thumbnails
+/.VirtualBox/VBoxSVC.log*
 /.wine
 /.Xauthority
 /.xsession-errors*
@@ -66,7 +67,7 @@ Cookies*
 Current Session
 Current Tabs
 databases
-Extension Cookies
+Extension Cookies*
 Extension Rules
 Extension State
 Extensions
