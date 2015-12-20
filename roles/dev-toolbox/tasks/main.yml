@@ -36,7 +36,16 @@
   with_items:
     - rhino
     - groovy
+
+- name: Install python stuff via APT
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
     - python-dev
+    - pychecker
+    - pylint
 
 - name: Install network clients via APT
   apt:
