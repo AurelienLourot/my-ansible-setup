@@ -55,6 +55,7 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/pylintrc"
+    tags: legacy
 
   - role: create-symlink
     link_name: .xbindkeysrc.scm
