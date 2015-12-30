@@ -20,13 +20,12 @@ alias homesize='bash ${ansibleInventoryDir}/files/homesize.sh'
 alias dock='xrandr --output HDMI2 --rotate right --mode 1920x1200 && xrandr --output eDP1 --mode 1024x768'
 alias undock='xrandr --output eDP1 --mode 1366x768'
 
-# git: 
-function parse_git_branch_and_add_brackets {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
-}
-PS1="\u@\h:\w\$(parse_git_branch_and_add_brackets)\$ "
-# from [https://gist.github.com/616341]
-#TODO: source ~/.git-completion.sh
+# git, from https://gist.github.com/616341:
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUPSTREAM="auto"
+export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+PS1='\u@\h:\w\[\033[1;32m\]$(__git_ps1 " [%s]")\[\033[0m\]\$ '
 
 # Solves chromium input key bug:
 # https://code.google.com/p/chromium/issues/detail?id=360388
