@@ -13,6 +13,7 @@
 /.gradle
 /.gstreamer-0.10
 /.ICEauthority
+/.icedtea/cache
 /.IdeaIC15/system
 /.java/.userPrefs/.user*
 /.juniper_networks
@@ -38,6 +39,7 @@
 /.msjnc.log
 /.nv/GLCache
 /.p4tickets
+/.pip/pip.log
 /.pulse
 /.rnd
 /.semanticdb
