@@ -47,6 +47,16 @@
     - pychecker
     - pylint
 
+- name: Install LaTeX stuff via APT
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - texlive-latex-base
+    - texlive-latex-extra
+    - pgf
+
 - name: Install network clients via APT
   apt:
     name: "{{ item }}"
