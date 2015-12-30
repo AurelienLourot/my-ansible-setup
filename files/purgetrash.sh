@@ -1,3 +1,7 @@
 set -e
 cd ~/trash/
-#FIXME doesn't work if trash empty: trash-put * .*
+if [ "$(ls -A)" ]
+then
+    # directory not empty
+    trash-put $(ls -A)
+fi
