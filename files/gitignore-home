@@ -3,6 +3,10 @@
 /.cache
 /.compiz/session
 /.config/dconf/user
+/.config/deluge/ipc/*.lock
+/.config/deluge/state
+/.config/deluge/*.conf~
+/.config/deluge/*.state
 /.config/ibus/bus
 /.config/libreoffice/4/user/uno_packages/cache
 /.config/pulse
