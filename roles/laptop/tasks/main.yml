@@ -1,6 +1,9 @@
 ---
-- name: Install APT package
+- name: Install APT packages
   apt:
-    name: acpi
+    name: "{{ item }}"
   become: yes
   become_method: sudo
+  with_items:
+    - acpi
+    - gpointing-device-settings

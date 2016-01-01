@@ -80,6 +80,7 @@
     - bash-completion
     - lib32ncurses5
     - pdfgrep
+    - gnome-terminal
 
 - name: Install system tools via APT
   apt:
@@ -92,6 +93,7 @@
     - lsof
     - htop
     - moreutils
+    - kuser
 
 - name: Install npm via APT
   apt:
@@ -109,6 +111,7 @@
     - ia32-libs
     - gmrun
     - mcrypt
+    - pwgen
     - maven2
     - mongodb
     - mysql-client

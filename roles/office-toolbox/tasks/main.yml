@@ -6,6 +6,7 @@
   become_method: sudo
   with_items:
     - libreoffice
+    - dia
     - kcalc
     - okular
     - acroread
