@@ -191,5 +191,10 @@
 
 - name: Generate ssh key pair
   user:
-    name: lourot
+    name: "{{ username }}"
     generate_ssh_key: yes
+
+- name: Authorize ssh public key
+  authorized_key:
+    user: "{{ username }}"
+    key: "{{ lookup('file', '/home/lourot/.ssh/id_rsa.pub') }}" #FIXME: use lookup('env', 'HOME')

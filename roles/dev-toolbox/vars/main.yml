@@ -1,2 +1,3 @@
 ---
 main_bashrc_on_host: "{{ lookup('env', 'HOME') }}/.bashrc"
+username: lourot
