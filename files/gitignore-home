@@ -30,6 +30,8 @@
 /.kde/socket-localhost
 /.kde/tmp-localhost
 /.lesshst
+/.local/share/akonadi/db_data
+/.local/share/akonadi/*.error
 /.local/share/gvfs-metadata
 /.local/share/icc
 /.local/share/icons
