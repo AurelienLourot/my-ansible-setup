@@ -198,3 +198,6 @@
   authorized_key:
     user: "{{ username }}"
     key: "{{ lookup('file', '/home/lourot/.ssh/id_rsa.pub') }}" #FIXME: use lookup('env', 'HOME')
+
+- name: Add ssh private key to agent
+  command: ssh-add
