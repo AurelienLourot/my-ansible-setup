@@ -69,6 +69,7 @@ dependencies:
     target: "{{ inventory_dir }}/files/lightdm-gtk-greeter-config-derivative"
     with_sudo: yes
     when: has_lubuntu_desktop
+    tags: legacy
 
   - role: create-symlink
     link_name: locale
