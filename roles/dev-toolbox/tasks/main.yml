@@ -199,5 +199,7 @@
     user: "{{ username }}"
     key: "{{ lookup('file', '/home/lourot/.ssh/id_rsa.pub') }}" #FIXME: use lookup('env', 'HOME')
 
+#FIXME: this task is executed each time:
 - name: Add ssh private key to agent
   command: ssh-add
+  when: has_ssh_agent

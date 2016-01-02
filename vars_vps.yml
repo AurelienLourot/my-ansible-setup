@@ -18,6 +18,7 @@ has_exotic_interpreters: False
 has_latex: False
 has_ftp_client: False
 has_mysql_client: False
+has_ssh_agent: False
 has_maven: False
 has_mongodb: False
 has_kuser: False

@@ -18,6 +18,7 @@ has_exotic_interpreters: True
 has_latex: True
 has_ftp_client: True
 has_mysql_client: True
+has_ssh_agent: True
 has_maven: True
 has_mongodb: True
 has_kuser: True
