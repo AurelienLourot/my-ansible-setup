@@ -14,3 +14,4 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/gitignore-home"
+    tags: legacy
