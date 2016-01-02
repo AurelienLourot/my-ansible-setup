@@ -72,6 +72,16 @@ dependencies:
     tags: legacy
 
   - role: create-symlink
+    link_name: logind.conf
+    link_path: /etc/systemd/
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/logind.conf"
+    with_sudo: yes
+    when: has_lubuntu_desktop
+    tags: legacy
+
+  - role: create-symlink
     link_name: locale
     link_path: /etc/default/
     # Unfortunately we can't use 'role_path'
