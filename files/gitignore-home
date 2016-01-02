@@ -14,6 +14,8 @@
 /.fontconfig
 /.gksu.lock
 /.gmrun_history
+/.gnupg
+/.googleearth
 /.gradle
 /.gstreamer-0.10
 /.ICEauthority
@@ -41,6 +43,7 @@
 /.macromedia
 /.mozilla/firefox
 /.msjnc.log
+/.nfs*
 /.nv/GLCache
 /.p4tickets
 /.pip/pip.log
@@ -49,6 +52,7 @@
 /.semanticdb
 /.sky2/logs
 /.Skype
+/.snapshot
 /.thumbnails
 /.VirtualBox/VBoxSVC.log*
 /.wine
@@ -61,6 +65,7 @@
 /tmp
 /trash
 /VirtualBox VMs
+/workspace*
 
 # chromium:
 Application Cache
