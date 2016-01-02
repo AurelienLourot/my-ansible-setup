@@ -25,6 +25,7 @@
     - kdiff3
     - pandoc
   when: has_coding_tools
+  tags: legacy
 
 - name: Install SCM clients via APT
   apt:
