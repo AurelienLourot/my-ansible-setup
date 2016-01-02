@@ -40,6 +40,7 @@
   when: with_sudo|bool and backup|bool and orig_file.stat.exists and backup_file.stat.exists == False
   become: yes
   become_method: sudo
+#FIXME: fails when the old thing (to be replaced by a symlink) is a non-empty directory:
 - name: "Link {{ link_name }}"
   file:
     src: "{{ target }}"
