@@ -188,6 +188,7 @@
     regexp: uuidgen-4af6b62e-6972-4e3d-a7ab-9f220c6a861d
   become: yes
   become_method: sudo
+  tags: legacy
 
 - name: Generate ssh key pair
   user:
