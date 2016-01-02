@@ -49,7 +49,6 @@
 /.semanticdb
 /.sky2/logs
 /.Skype
-/.ssh/known_hosts
 /.thumbnails
 /.VirtualBox/VBoxSVC.log*
 /.wine
