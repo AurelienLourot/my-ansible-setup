@@ -10,6 +10,7 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/kwriterc"
+    when: has_editors_other_than_emacs
 
   - role: line-in-file
     dest: "{{ main_bashrc_on_host }}"
@@ -41,6 +42,7 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/npmrc"
+    when: has_npm
 
   - role: create-symlink
     link_name: .hgrc
@@ -48,6 +50,7 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/hgrc"
+    when: has_scm_other_than_git
 
   - role: create-symlink
     link_name: .pylintrc
@@ -55,6 +58,7 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/pylintrc"
+    when: has_coding_tools
     tags: legacy
 
   - role: create-symlink
@@ -70,6 +74,7 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/focusDesktopConsole.py"
+    when: has_lubuntu_desktop
 
   - role: create-symlink
     link_name: DesktopConsole.ds
@@ -77,3 +82,4 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/DesktopConsole.ds"
+    when: has_lubuntu_desktop

@@ -1,13 +1,19 @@
 ---
-- name: Install text editors via APT
+- name: Install emacs via APT
+  apt:
+    name: emacs
+  become: yes
+  become_method: sudo
+
+- name: Install other text editors via APT
   apt:
     name: "{{ item }}"
   become: yes
   become_method: sudo
   with_items:
     - kwrite
-    - emacs
     - gedit
+  when: has_editors_other_than_emacs
 
 - name: Install coding tools via APT
   apt:
@@ -18,6 +24,7 @@
     - kompare
     - kdiff3
     - pandoc
+  when: has_coding_tools
 
 - name: Install SCM clients via APT
   apt:
@@ -27,6 +34,7 @@
   with_items:
     - mercurial
     - subversion
+  when: has_scm_other_than_git
 
 - name: Install interpreters via APT
   apt:
@@ -36,16 +44,23 @@
   with_items:
     - rhino
     - groovy
+  when: has_exotic_interpreters
 
-- name: Install python stuff via APT
+- name: Install python via APT
+  apt:
+    name: python-dev
+  become: yes
+  become_method: sudo
+
+- name: Install python linters via APT
   apt:
     name: "{{ item }}"
   become: yes
   become_method: sudo
   with_items:
-    - python-dev
     - pychecker
     - pylint
+  when: has_coding_tools
 
 - name: Install LaTeX stuff via APT
   apt:
@@ -56,17 +71,38 @@
     - texlive-latex-base
     - texlive-latex-extra
     - pgf
+  when: has_latex
 
-- name: Install network clients via APT
+- name: Install FTP client via APT
+  apt:
+    name: gftp
+  become: yes
+  become_method: sudo
+  when: has_ftp_client
+
+- name: Install MySQL client via APT
+  apt:
+    name: mysql-client
+  become: yes
+  become_method: sudo
+  when: has_mysql_client
+
+- name: Install other network clients via APT
   apt:
     name: "{{ item }}"
   become: yes
   become_method: sudo
   with_items:
-    - gftp
     - telnet
     - sshpass
     - mtr
+
+- name: Install gnome-terminal via APT
+  apt:
+    name: gnome-terminal
+  become: yes
+  become_method: sudo
+  when: has_lubuntu_desktop
 
 - name: Install shell tools via APT
   apt:
@@ -80,9 +116,15 @@
     - bash-completion
     - lib32ncurses5
     - pdfgrep
-    - gnome-terminal
 
-- name: Install system tools via APT
+- name: Install kuser via APT
+  apt:
+    name: kuser
+  become: yes
+  become_method: sudo
+  when: has_kuser
+
+- name: Install other system tools via APT
   apt:
     name: "{{ item }}"
   become: yes
@@ -93,7 +135,6 @@
     - lsof
     - htop
     - moreutils
-    - kuser
 
 - name: Install npm via APT
   apt:
@@ -102,6 +143,27 @@
   become_method: sudo
   when: npm_is_from_apt
 
+- name: Install maven via APT
+  apt:
+    name: maven2
+  become: yes
+  become_method: sudo
+  when: has_maven
+
+- name: Install MongoDB via APT
+  apt:
+    name: mongodb
+  become: yes
+  become_method: sudo
+  when: has_mongodb
+
+- name: Install gmrun via APT
+  apt:
+    name: gmrun
+  become: yes
+  become_method: sudo
+  when: has_lubuntu_desktop
+
 - name: Install other APT packages
   apt:
     name: "{{ item }}"
@@ -109,12 +171,8 @@
   become_method: sudo
   with_items:
     - ia32-libs
-    - gmrun
     - mcrypt
     - pwgen
-    - maven2
-    - mongodb
-    - mysql-client
 
 - name: "Add source line to bashrc"
   lineinfile:
