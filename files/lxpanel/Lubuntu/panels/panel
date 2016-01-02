@@ -56,6 +56,22 @@ Plugin {
 }
 
 Plugin {
+    type = batt
+    Config {
+        HideIfNoBattery=0
+        AlarmCommand=xmessage Battery low
+        AlarmTime=5
+        BackgroundColor=black
+        BorderWidth=0
+        ChargingColor1=#28f200
+        ChargingColor2=#22cc00
+        DischargingColor1=#ffee00
+        DischargingColor2=#d9ca00
+        Size=5
+    }
+}
+
+Plugin {
     type = tray
 }
 
@@ -63,6 +79,7 @@ Plugin {
     type = dclock
     Config {
         ClockFmt=%a %Y-%m-%d | %R
+        TooltipFmt=%A %x
         BoldFont=0
         IconOnly=0
         CenterText=0
@@ -72,7 +89,7 @@ Plugin {
 Plugin {
     type = menu
     Config {
-        image=~/.local/share/configurelinux/start_icon.png
+        image=/home/lourot/.local/share/configurelinux/start_icon.png
         system {
         }
         separator {
