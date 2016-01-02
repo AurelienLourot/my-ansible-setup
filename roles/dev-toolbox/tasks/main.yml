@@ -204,3 +204,4 @@
 - name: Add ssh private key to agent
   command: ssh-add
   when: has_ssh_agent
+  tags: legacy
