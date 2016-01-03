@@ -64,7 +64,7 @@ dependencies:
 
   - role: create-symlink
     link_name: lightdm-gtk-greeter-config-derivative
-    link_path: /etc/alternatives/
+    link_path: /etc/alternatives
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/lightdm-gtk-greeter-config-derivative"
@@ -74,7 +74,7 @@ dependencies:
 
   - role: create-symlink
     link_name: logind.conf
-    link_path: /etc/systemd/
+    link_path: /etc/systemd
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/logind.conf"
@@ -84,7 +84,7 @@ dependencies:
 
   - role: create-symlink
     link_name: locale
-    link_path: /etc/default/
+    link_path: /etc/default
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/locale"
@@ -93,7 +93,7 @@ dependencies:
   - role: create-symlink
     link_name: autostart.sh
     # See autostart.desktop why we can't put this file in ~/bin :
-    link_path: "/usr/local/bin"
+    link_path: /usr/local/bin
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/autostart.sh"
@@ -102,7 +102,7 @@ dependencies:
 
   - role: create-symlink
     link_name: purgetrash.sh
-    link_path: "/usr/local/bin"
+    link_path: /usr/local/bin
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/purgetrash.sh"

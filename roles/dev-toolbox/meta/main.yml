@@ -6,7 +6,7 @@ dependencies:
 
   - role: create-symlink
     link_name: kwriterc
-    link_path: "{{ lookup('env', 'HOME') }}/.kde/share/config/"
+    link_path: "{{ lookup('env', 'HOME') }}/.kde/share/config"
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/kwriterc"

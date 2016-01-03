@@ -2,13 +2,13 @@
 dependencies:
   - role: create-symlink
     link_name: libudev.so.1
-    link_path: /lib/x86_64-linux-gnu/
+    link_path: /lib/x86_64-linux-gnu
     target: /lib/x86_64-linux-gnu/libudev.so.0
     with_sudo: yes
 
   #FIXME: relies on the fact that the target exists and is on another drive:
   - role: create-symlink
     link_name: spotify
-    link_path: "{{ lookup('env', 'HOME') }}/.cache/"
+    link_path: "{{ lookup('env', 'HOME') }}/.cache"
     target: "{{ lookup('env', 'HOME') }}/Documents/cache/spotify"
     backup: no
