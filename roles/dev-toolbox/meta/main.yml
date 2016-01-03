@@ -20,6 +20,7 @@ dependencies:
     line: "ansibleInventoryDir={{ inventory_dir }} # uuidgen-20ce84f6-6313-4d61-8641-245c42741ffb"
     line_description: args
     regexp: uuidgen-20ce84f6-6313-4d61-8641-245c42741ffb
+    tags: legacy
 
   - role: line-in-file
     dest: "{{ main_bashrc_on_host }}"

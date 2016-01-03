@@ -181,6 +181,7 @@
     line: "source ${ansibleInventoryDir}/files/bashrc # uuidgen-79cb621e-49f4-4662-bd6c-518e97ae97cb"
     regexp: uuidgen-79cb621e-49f4-4662-bd6c-518e97ae97cb
     insertafter: uuidgen-20ce84f6-6313-4d61-8641-245c42741ffb
+  tags: legacy
 
 - name: "Add workstation to hosts"
   lineinfile:
