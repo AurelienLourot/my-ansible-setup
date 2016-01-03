@@ -76,6 +76,16 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/focusDesktopConsole.py"
     when: has_lubuntu_desktop
+    tags: legacy
+
+  - role: create-symlink
+    link_name: focusDesktopConsole.sh
+    link_path: "{{ lookup('env', 'HOME') }}/bin"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/focusDesktopConsole.sh"
+    when: has_lubuntu_desktop
+    tags: legacy
 
   - role: create-symlink
     link_name: DesktopConsole.ds

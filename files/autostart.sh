@@ -19,3 +19,5 @@ devilspie &
 #    gnome-terminal --geometry=50x50+50+50 --window-with-profile=DesktopConsole$i &
 #    sleep 0.1 # otherwise might be too fast for devilspie
 #done
+
+focusDesktopConsole.sh &
