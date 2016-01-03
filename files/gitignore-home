@@ -8,7 +8,7 @@
 /.config/deluge/*.conf~
 /.config/deluge/*.state
 /.config/ibus/bus
-/.config/libreoffice/4/user/uno_packages/cache
+/.config/libreoffice/*/user/*/*cache
 /.config/pulse
 /.dbus/session-bus
 /.fontconfig
