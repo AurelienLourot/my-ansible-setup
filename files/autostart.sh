@@ -13,11 +13,10 @@ purgetrash.sh
 nm-applet &
 
 devilspie &
-#TODO:
-#for i in $(seq 1 8)
-#do
-#    gnome-terminal --geometry=50x50+50+50 --window-with-profile=DesktopConsole$i &
-#    sleep 0.1 # otherwise might be too fast for devilspie
-#done
+for i in $(seq 1 8)
+do
+    gnome-terminal --geometry=50x50+50+50 --window-with-profile=DesktopConsole$i &
+    sleep 0.1 # otherwise might be too fast for devilspie
+done
 
 focusDesktopConsole.sh &

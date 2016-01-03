@@ -19,3 +19,10 @@
     - xdotool
     - wmctrl
   when: has_lubuntu_desktop
+
+- name: Deploy gnome-terminal configuration
+  copy:
+    src: "{{ inventory_dir }}/files/gnome-terminal"
+    dest: "{{ lookup('env', 'HOME') }}/.gconf/apps"
+  when: has_lubuntu_desktop
+  tags: legacy
