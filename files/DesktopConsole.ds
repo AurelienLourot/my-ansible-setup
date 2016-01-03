@@ -8,7 +8,7 @@
                 (skip_tasklist)
                 (wintype "utility")
                 (geometry "+50+50")
-                (geometry "1180x800")
+                (geometry "1180x680")
         )
 )
 (if
@@ -21,7 +21,7 @@
                 (skip_tasklist)
                 (wintype "utility")
                 (geometry "+50+50")
-                (geometry "1180x800")
+                (geometry "1180x680")
         )
 )
 (if
@@ -34,7 +34,7 @@
                 (skip_tasklist)
                 (wintype "utility")
                 (geometry "+50+50")
-                (geometry "1180x800")
+                (geometry "1180x680")
         )
 )
 (if
@@ -47,7 +47,7 @@
                 (skip_tasklist)
                 (wintype "utility")
                 (geometry "+50+50")
-                (geometry "1180x800")
+                (geometry "1180x680")
         )
 )
 (if
@@ -60,7 +60,7 @@
                 (skip_tasklist)
                 (wintype "utility")
                 (geometry "+50+50")
-                (geometry "1180x800")
+                (geometry "1180x680")
         )
 )
 (if
@@ -73,7 +73,7 @@
                 (skip_tasklist)
                 (wintype "utility")
                 (geometry "+50+50")
-                (geometry "1180x800")
+                (geometry "1180x680")
         )
 )
 (if
@@ -86,7 +86,7 @@
                 (skip_tasklist)
                 (wintype "utility")
                 (geometry "+50+50")
-                (geometry "1180x800")
+                (geometry "1180x680")
         )
 )
 (if
@@ -99,6 +99,6 @@
                 (skip_tasklist)
                 (wintype "utility")
                 (geometry "+50+50")
-                (geometry "1180x800")
+                (geometry "1180x680")
         )
 )
