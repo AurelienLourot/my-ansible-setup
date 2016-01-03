@@ -36,6 +36,7 @@
 /.local/share/icc
 /.local/share/icons
 /.local/share/keyrings
+/.local/share/mc/history
 /.local/share/recently-used.xbel
 /.local/share/spotify
 /.local/share/Trash
