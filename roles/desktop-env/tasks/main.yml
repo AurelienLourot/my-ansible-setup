@@ -13,6 +13,7 @@
   become_method: sudo
   with_items:
     - gnome-control-center
+    - network-manager-gnome
     - xscreensaver
     - devilspie
     - xdotool

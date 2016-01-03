@@ -10,6 +10,8 @@ sudo cron
 
 purgetrash.sh
 
+nm-applet &
+
 devilspie &
 #TODO:
 #for i in $(seq 1 8)
