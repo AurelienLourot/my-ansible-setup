@@ -31,11 +31,12 @@ dependencies:
 
   - role: create-symlink
     link_name: inputrc
-    link_path: "/etc/"
+    link_path: "/etc"
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/inputrc"
     with_sudo: yes
+    tags: legacy
 
   - role: create-symlink
     link_name: .npmrc
