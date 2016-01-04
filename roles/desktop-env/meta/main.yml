@@ -34,6 +34,7 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/libfm"
     when: has_lubuntu_desktop
+    tags: legacy
   - role: create-symlink
     link_name: pcmanfm
     link_path: "{{ lookup('env', 'HOME') }}/.config"
