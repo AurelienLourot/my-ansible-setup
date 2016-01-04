@@ -91,7 +91,7 @@ Plugin {
     type = menu
     Config {
 #FIXME: wrong path to home on HP laptop:
-        image=/home/lourot/Downloads/configurelinux/0050_ansible/files/start_icon.png
+        image=/home/lourot/.local/share/configurelinux/start_icon.png
         system {
         }
         separator {

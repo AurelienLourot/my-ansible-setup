@@ -16,6 +16,7 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/start_icon.png"
     when: has_lubuntu_desktop
+    tags: legacy
 
   - role: create-symlink
     link_name: autostart.desktop
