@@ -94,3 +94,4 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/DesktopConsole.ds"
     when: has_lubuntu_desktop
+    tags: legacy
