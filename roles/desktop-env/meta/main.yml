@@ -95,6 +95,7 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/locale"
     with_sudo: yes
+    tags: legacy
 
   - role: create-symlink
     link_name: autostart.sh
