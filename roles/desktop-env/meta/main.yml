@@ -42,6 +42,7 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/pcmanfm"
     when: has_lubuntu_desktop
+    tags: legacy
   - role: create-symlink
     link_name: lxpanel
     link_path: "{{ lookup('env', 'HOME') }}/.config"
