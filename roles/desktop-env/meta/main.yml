@@ -7,6 +7,7 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/xinitrc"
     when: has_lubuntu_desktop
+    tags: legacy
 
   - role: create-symlink
     link_name: start_icon.png
