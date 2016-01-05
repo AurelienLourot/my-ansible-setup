@@ -12,6 +12,7 @@
 /.config/pulse
 /.dbus/session-bus
 /.fontconfig
+/.gconf/apps/gnome-terminal/profiles
 /.gksu.lock
 /.gmrun_history
 /.gnupg
