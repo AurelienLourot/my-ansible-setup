@@ -49,9 +49,12 @@
 
 - name: Install python via APT
   apt:
-    name: python-dev
+    name: "{{ item }}"
   become: yes
   become_method: sudo
+  with_items:
+    - python-dev
+    - python-setuptools
 
 - name: Install python linters via APT
   apt:
@@ -61,6 +64,7 @@
   with_items:
     - pychecker
     - pylint
+    - pyflakes
   when: has_coding_tools
 
 - name: Install LaTeX stuff via APT
@@ -174,6 +178,7 @@
     - ia32-libs
     - mcrypt
     - pwgen
+    - xbacklight # for IntelliJ IDEA
 
 - name: "Add source line to bashrc"
   lineinfile:
