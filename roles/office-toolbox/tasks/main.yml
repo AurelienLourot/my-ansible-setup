@@ -10,6 +10,7 @@
     - kcalc
     - okular
     - acroread
+    - poppler-utils # for pdfunite
     - kontact
 
 - name: Add APT key for Canon scan software
