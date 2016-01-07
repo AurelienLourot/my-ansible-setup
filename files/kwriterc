@@ -1,6 +1,11 @@
 [General Options]
+ShowMenuBar=true
 ShowPath=false
 ShowStatusBar=true
+
+[KFileDialog Settings]
+Height 900=510
+Width 1600=816
 
 [Kate Document Defaults]
 Allow End of Line Detection=true
@@ -10,7 +15,7 @@ BOM=false
 Backup Config Flags=0
 Backup Prefix=
 Backup Suffix=~
-Encoding=ISO-8859-1
+Encoding=UTF-8
 End of Line=0
 Indent On Backspace=false
 Indent On Tab=true
@@ -26,7 +31,7 @@ PageUp/PageDown Moves Cursor=false
 Remove Spaces=false
 RemoveTrailingDyn=false
 ReplaceTabsDyn=false
-Search Dir Config Depth=3
+Search Dir Config Depth=9
 Show Spaces=false
 Show Tabs=true
 Smart Home=true
@@ -39,6 +44,35 @@ Wrap Cursor=true
 [Kate Part Defaults]
 Encoding Prober Type=1
 Fallback Encoding=ISO-8859-15
+
+[Kate Print Settings][HeaderFooter]
+FooterBackground=211,211,211
+FooterBackgroundEnabled=false
+FooterEnabled=true
+FooterForeground=0,0,0
+FooterFormatCenter=
+FooterFormatLeft=
+FooterFormatRight=%U
+HeaderBackground=211,211,211
+HeaderBackgroundEnabled=false
+HeaderEnabled=true
+HeaderFooterFont=Ubuntu,11,-1,5,50,0,0,0,0,0
+HeaderForeground=0,0,0
+HeaderFormatCenter=%f
+HeaderFormatLeft=%y
+HeaderFormatRight=%p
+
+[Kate Print Settings][Layout]
+BackgroundColorEnabled=false
+BoxColor=invalid
+BoxEnabled=false
+BoxMargin=6
+BoxWidth=1
+ColorScheme=Printing
+
+[Kate Print Settings][Text]
+Legend=false
+LineNumbers=false
 
 [Kate Renderer Defaults]
 Schema=kwrite - Normal
