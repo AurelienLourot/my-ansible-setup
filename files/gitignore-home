@@ -59,7 +59,8 @@
 /.Skype
 /.snapshot
 /.thumbnails
-/.VirtualBox/VBoxSVC.log*
+/.VirtualBox/*.dat
+/.VirtualBox/*.log*
 /.wine
 /.Xauthority
 /.xsession-errors*
