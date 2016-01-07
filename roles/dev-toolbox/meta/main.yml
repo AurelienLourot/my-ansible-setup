@@ -11,6 +11,7 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/kwriterc"
     when: has_editors_other_than_emacs
+    tags: legacy
 
   - role: line-in-file
     dest: "{{ main_bashrc_on_host }}"
