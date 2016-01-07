@@ -10,6 +10,7 @@
 /.config/ibus/bus
 /.config/libreoffice/*/user/*/*cache
 /.config/pulse
+/.config/tel.red/sky.conf
 /.dbus/session-bus
 /.fontconfig
 /.gconf/apps/gnome-terminal/profiles
@@ -72,6 +73,7 @@
 /workspace*
 
 # chromium:
+.org.chromium.Chromium.*
 Application Cache
 Bookmarks*
 Cache
