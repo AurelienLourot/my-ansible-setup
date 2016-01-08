@@ -10,7 +10,7 @@ sudo cron
 
 purgetrash.sh
 
-nm-applet &
+pgrep nm-applet || nm-applet &
 
 devilspie &
 for i in $(seq 1 8)
