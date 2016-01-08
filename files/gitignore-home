@@ -76,6 +76,7 @@
 # chromium:
 .org.chromium.Chromium.*
 Application Cache
+Avatars
 Bookmarks*
 Cache
 Certificate Revocation Lists
@@ -83,7 +84,9 @@ chrome_shutdown_ms.txt
 Cookies*
 Current Session
 Current Tabs
+data_reduction_proxy_leveldb
 databases
+Dictionaries
 Extension Cookies*
 Extension Rules
 Extension State
@@ -107,8 +110,10 @@ Login Data
 Login Data-journal
 Network Action Predictor
 Network Action Predictor-journal
+Network Persistent State
 Origin Bound Certs
 Origin Bound Certs-journal
+Platform Notifications
 Preferences
 QuotaManager*
 Safe Browsing *
