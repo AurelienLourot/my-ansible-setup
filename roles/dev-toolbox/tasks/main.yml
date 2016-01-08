@@ -206,7 +206,9 @@
 - name: Authorize ssh public key
   authorized_key:
     user: "{{ username }}"
-    key: "{{ lookup('file', '/home/lourot/.ssh/id_rsa.pub') }}" #FIXME: use lookup('env', 'HOME')
+    key: "{{ lookup('file', item + '/.ssh/id_rsa.pub') }}"
+  with_items:
+    - "{{ lookup('env', 'HOME') }}"
   when: has_ssh_agent
 
 #FIXME: this task is executed each time:
