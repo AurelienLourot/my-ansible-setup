@@ -1,0 +1,2 @@
+lourot ALL=NOPASSWD: /usr/sbin/cron
+lourot ALL=NOPASSWD: /usr/local/bin/mount_sdcard.sh

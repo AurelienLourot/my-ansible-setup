@@ -1,5 +1,7 @@
 ---
 dependencies:
+  - role: add-sudoers
+
   - role: create-symlink
     link_name: .xinitrc
     link_path: "{{ lookup('env', 'HOME') }}"

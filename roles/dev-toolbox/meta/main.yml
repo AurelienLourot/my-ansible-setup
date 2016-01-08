@@ -1,5 +1,6 @@
 ---
 dependencies:
+  - role: add-sudoers
   - role: git-client
   - role: adb-client
     when: adb_is_from_ppa

@@ -5,6 +5,9 @@ xhost +  # allows any user to start X apps
 xmodmap -e "keycode 133 = Caps_Lock"
 xmodmap -e "keycode 22 shift = BackSpace Delete"
 
+# Mount sdcard on chromebook:
+sudo /usr/local/bin/mount_sdcard.sh
+
 # Necessary in crouton. On classic Ubuntu, won't have any effect as cron is already running:
 sudo cron
 
