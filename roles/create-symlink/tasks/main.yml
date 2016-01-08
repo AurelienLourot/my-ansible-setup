@@ -7,10 +7,19 @@
   set_fact:
     backup_fullpath: "{{ link }}.old"
 
+#FIXME: I can't get 'become: "{{ with_sudo | bool }}"' to work, that's why it's duplicated here:
 - name: "Make {{ link_name }} dir"
   file:
     path: "{{ link_path }}"
     state: directory
+  when: with_sudo|bool == False
+- name: "Make {{ link_name }} dir"
+  file:
+    path: "{{ link_path }}"
+    state: directory
+  when: with_sudo|bool
+  become: yes
+  become_method: sudo
 
 - name: "Stat {{ link_name }}"
   stat:

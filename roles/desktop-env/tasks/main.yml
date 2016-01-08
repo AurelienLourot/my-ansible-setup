@@ -26,3 +26,11 @@
     dest: "{{ lookup('env', 'HOME') }}/.gconf/apps"
   when: has_lubuntu_desktop
   tags: legacy
+
+- name: Cleanup older version
+  file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+    - "{{ lookup('env', 'HOME') }}/.local/share/configurelinux/start_icon.png"
+    - "{{ lookup('env', 'HOME') }}/.local/share/configurelinux/start_icon.png.old"

@@ -90,8 +90,7 @@ Plugin {
 Plugin {
     type = menu
     Config {
-#FIXME: wrong path to home on HP laptop:
-        image=/home/lourot/.local/share/configurelinux/start_icon.png
+        image=/opt/configurelinux/start_icon.png
         system {
         }
         separator {
