@@ -45,6 +45,7 @@
   with_items:
     - rhino
     - groovy
+    - lua5.2
   when: has_exotic_interpreters
 
 - name: Install python via APT
@@ -165,6 +166,13 @@
 - name: Install gmrun via APT
   apt:
     name: gmrun
+  become: yes
+  become_method: sudo
+  when: has_lubuntu_desktop
+
+- name: Install documentations via APT
+  apt:
+    name: ansible-doc
   become: yes
   become_method: sudo
   when: has_lubuntu_desktop
