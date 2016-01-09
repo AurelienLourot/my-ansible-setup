@@ -170,12 +170,12 @@
   become_method: sudo
   when: has_lubuntu_desktop
 
-- name: Install documentations via APT
+- name: Install ansible-doc via APT
   apt:
     name: ansible-doc
   become: yes
   become_method: sudo
-  when: has_lubuntu_desktop
+  when: has_ansible_doc
 
 - name: Install other APT packages
   apt:

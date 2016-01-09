@@ -22,4 +22,5 @@ has_mysql_client: True
 has_ssh_agent: True
 has_maven: True
 has_mongodb: True
+has_ansible_doc: False
 has_kuser: True
