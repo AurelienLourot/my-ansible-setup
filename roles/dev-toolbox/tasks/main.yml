@@ -45,7 +45,6 @@
   with_items:
     - rhino
     - groovy
-    - lua5.2
   when: has_exotic_interpreters
 
 - name: Install python via APT
@@ -224,3 +223,12 @@
   command: ssh-add
   when: has_ssh_agent
   #FIXME: fails on workstation: tags: legacy
+
+- name: Cleanup older devilspie config location
+  file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+    - "{{ lookup('env', 'HOME') }}/.devilspie/DesktopConsole.ds"
+    - "{{ lookup('env', 'HOME') }}/.devilspie/DesktopConsole.ds.old"
+  tags: legacy

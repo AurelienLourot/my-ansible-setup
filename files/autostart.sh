@@ -15,7 +15,7 @@ purgetrash.sh
 
 pgrep nm-applet || nm-applet &
 
-devilspie &
+devilspie2 &
 for i in $(seq 1 8)
 do
     gnome-terminal --geometry=50x50+50+50 --window-with-profile=DesktopConsole$i &

@@ -91,10 +91,10 @@ dependencies:
     tags: legacy
 
   - role: create-symlink
-    link_name: DesktopConsole.ds
-    link_path: "{{ lookup('env', 'HOME') }}/.devilspie"
+    link_name: DesktopConsole.lua
+    link_path: "{{ lookup('env', 'HOME') }}/.config/devilspie2"
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/DesktopConsole.ds"
+    target: "{{ inventory_dir }}/files/DesktopConsole.lua"
     when: has_lubuntu_desktop
     tags: legacy

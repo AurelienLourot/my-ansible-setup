@@ -6,6 +6,22 @@
   become_method: sudo
   when: has_lubuntu_desktop
 
+- name: Install Lua for devilspie2
+  apt:
+    name: lua5.2
+  become: yes
+  become_method: sudo
+  when: has_lubuntu_desktop
+  tags: legacy
+
+- name: Install recent devilspie2
+  apt:
+    deb: "{{ role_path }}/files/devilspie2_0.39-4_amd64.deb"
+  become: yes
+  become_method: sudo
+  when: has_lubuntu_desktop
+  tags: legacy
+
 - name: Install other APT packages
   apt:
     name: "{{ item }}"
@@ -15,7 +31,6 @@
     - gnome-control-center
     - network-manager-gnome
     - xscreensaver
-    - devilspie
     - xdotool
     - wmctrl
   when: has_lubuntu_desktop
@@ -27,7 +42,7 @@
   when: has_lubuntu_desktop
   tags: legacy
 
-- name: Cleanup older version
+- name: Cleanup older start_icon location
   file:
     path: "{{ item }}"
     state: absent
