@@ -24,3 +24,6 @@ has_maven: True
 has_mongodb: True
 has_ansible_doc: False
 has_kuser: True
+
+# Used in extra roles outside this repository:
+has_extra_bashrc: False
