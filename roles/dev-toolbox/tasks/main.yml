@@ -187,6 +187,20 @@
     - pwgen
     - xbacklight # for IntelliJ IDEA
 
+- name: Install uncommitted's dependencies
+  pip:
+    requirements: "{{ role_path }}/files/uncommitted-a754c0d/requirements.txt"
+  become: yes
+  become_method: sudo
+  tags: legacy
+
+- name: Install uncommitted
+  pip:
+    name: "{{ role_path }}/files/uncommitted-a754c0d/uncommitted-1.6.tar.gz"
+  become: yes
+  become_method: sudo
+  tags: legacy
+
 - name: "Add source line to bashrc"
   lineinfile:
     dest: "{{ main_bashrc_on_host }}"
