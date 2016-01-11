@@ -112,6 +112,7 @@
 - name: Install shell tools via APT
   apt:
     name: "{{ item }}"
+    force: yes #FIXME shouldn't be necessary, needed because "mc-data mc cannot be authenticated"
   become: yes
   become_method: sudo
   with_items:
