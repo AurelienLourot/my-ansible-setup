@@ -1,4 +1,5 @@
 local screen_width, screen_height = get_screen_geometry()
+screen_width = math.min(screen_width,1920) -- limit for multiple screens
 
 for i=1,8 do
     if get_window_name() == "DesktopConsole" .. i then
