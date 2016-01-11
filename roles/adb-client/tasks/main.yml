@@ -8,6 +8,7 @@
 - name: Install APT package for adb
   apt:
     name: android-tools-adb
+    force: yes #FIXME shouldn't be necessary, needed probably because we haven't added the repo key
   become: yes
   become_method: sudo
 
