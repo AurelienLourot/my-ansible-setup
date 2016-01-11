@@ -49,19 +49,30 @@
   when: with_sudo|bool and backup|bool and orig_file.stat.exists and backup_file.stat.exists == False
   become: yes
   become_method: sudo
-#FIXME: fails when the old thing (to be replaced by a symlink) is a non-empty directory:
+# Note: this is necessary for directories as otherwise the symlink creation will fail to replace the
+#       original, even with `force: yes`.
+- name: "Delete backed-up {{ link_name }}"
+  file:
+    path: "{{ link }}"
+    state: absent
+  when: with_sudo|bool == False and backup|bool and orig_file.stat.exists and backup_file.stat.exists == False
+- name: "Delete backed-up {{ link_name }}"
+  file:
+    path: "{{ link }}"
+    state: absent
+  when: with_sudo|bool and backup|bool and orig_file.stat.exists and backup_file.stat.exists == False
+  become: yes
+  become_method: sudo
 - name: "Link {{ link_name }}"
   file:
     src: "{{ target }}"
     path: "{{ link }}"
-    force: yes # in case there is already a file in place (which we have backed up just before)
     state: link
   when: with_sudo|bool == False
 - name: "Link {{ link_name }}"
   file:
     src: "{{ target }}"
     path: "{{ link }}"
-    force: yes # in case there is already a file in place (which we have backed up just before)
     state: link
   when: with_sudo|bool
   become: yes
