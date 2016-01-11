@@ -54,7 +54,7 @@
   become_method: sudo
   with_items:
     - python-dev
-    - python-setuptools
+    - python-setuptools # for easy_install among others
 
 - name: Install python linters via APT
   apt:
@@ -187,6 +187,21 @@
     - mcrypt
     - pwgen
     - xbacklight # for IntelliJ IDEA
+
+# This one is broken on Ubuntu 14.04, see
+# http://stackoverflow.com/questions/27341064/how-do-i-fix-importerror-cannot-import-name-incompleteread
+- name: Remove broken pip
+  apt:
+    name: python-pip
+    state: absent
+  become: yes
+  become_method: sudo
+
+- name: Install pip
+  easy_install:
+    name: pip
+  become: yes
+  become_method: sudo
 
 - name: Install uncommitted's dependencies
   pip:
