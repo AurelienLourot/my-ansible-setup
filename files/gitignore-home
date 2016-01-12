@@ -11,6 +11,9 @@
 /.config/libreoffice/*/user/*/*cache
 /.config/pulse
 /.config/tel.red/sky.conf
+/.config/VirtualBox/*.dat
+/.config/VirtualBox/*.log*
+/.config/VirtualBox/*-prev
 /.dbus/session-bus
 /.fontconfig
 /.gconf/apps/gnome-terminal/profiles
