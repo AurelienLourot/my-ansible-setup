@@ -6,7 +6,6 @@ dependencies:
     target: /lib/x86_64-linux-gnu/libudev.so.0
     with_sudo: yes
 
-  #FIXME: relies on the fact that the target exists and is on another drive:
   - role: create-symlink
     link_name: spotify
     link_path: "{{ lookup('env', 'HOME') }}/.cache"
