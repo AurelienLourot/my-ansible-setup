@@ -4,13 +4,20 @@
   command: "gsettings set {{ item }}"
   when: has_editors_other_than_emacs
   with_items:
-    - com.ubuntu.update-notifier auto-launch false
-    - com.ubuntu.update-notifier hide-reboot-notification true
     - com.ubuntu.update-notifier no-show-notifications true
     - com.ubuntu.update-notifier regular-auto-launch-interval 999 # days
     - com.ubuntu.update-notifier show-apport-crashes false
     - com.ubuntu.update-manager check-dist-upgrades false
   tags: legacy
+- name: Disable update-manager and notifier on Ubuntu 12.04
+  command: "gsettings set {{ item }}"
+  when: has_editors_other_than_emacs
+  with_items:
+    - com.ubuntu.update-notifier auto-launch false
+    - com.ubuntu.update-notifier hide-reboot-notification true
+  tags: legacy
+  ignore_errors: yes
 - name: Kill update-notifier
   command: killall update-notifier
+  tags: legacy
   ignore_errors: yes
