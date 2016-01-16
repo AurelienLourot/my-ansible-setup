@@ -1,6 +1,7 @@
 ---
 - hosts: all
   roles:
+    - apt-client
     - home-tracker
     - desktop-env
     - dev-toolbox
