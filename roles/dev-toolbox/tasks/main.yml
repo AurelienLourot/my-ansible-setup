@@ -67,7 +67,7 @@
     - pyflakes
   when: has_coding_tools
 
-- name: Install LaTeX stuff via APT (can take 30 minutes)
+- name: Install LaTeX stuff via APT (may take up to 30 minutes)
   apt:
     name: "{{ item }}"
   become: yes
@@ -149,7 +149,7 @@
   become_method: sudo
   when: npm_is_from_apt
 
-- name: Install maven via APT
+- name: Install maven via APT (may take up to 15 minutes)
   apt:
     name: maven2
   become: yes

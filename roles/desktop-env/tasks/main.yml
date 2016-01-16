@@ -1,5 +1,5 @@
 ---
-- name: Install lubuntu-desktop via APT
+- name: Install lubuntu-desktop via APT (may take up to 30 minutes)
   apt:
     name: lubuntu-desktop
   become: yes
