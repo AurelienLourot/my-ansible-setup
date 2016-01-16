@@ -67,7 +67,7 @@
     - pyflakes
   when: has_coding_tools
 
-- name: Install LaTeX stuff via APT
+- name: Install LaTeX stuff via APT (can take 30 minutes)
   apt:
     name: "{{ item }}"
   become: yes
