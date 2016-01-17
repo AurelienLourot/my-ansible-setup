@@ -1,7 +1,7 @@
 ---
-- name: Install lubuntu-desktop via APT (may take up to 30 minutes)
-  apt:
-    name: lubuntu-desktop
+#FIXME: this is a workaround because Ansible's APT module is way too slow on an initial rollout.
+- name: Install lubuntu-desktop via APT
+  shell: apt-get install -y --no-install-recommends --no-upgrade lubuntu-desktop | ts '%F %T' >> ansible_apt.log
   become: yes
   become_method: sudo
   when: has_lubuntu_desktop

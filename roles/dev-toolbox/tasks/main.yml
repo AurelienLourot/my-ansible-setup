@@ -67,15 +67,11 @@
     - pyflakes
   when: has_coding_tools
 
-- name: Install LaTeX stuff via APT (may take up to 30 minutes)
-  apt:
-    name: "{{ item }}"
+#FIXME: this is a workaround because Ansible's APT module is way too slow on an initial rollout.
+- name: Install LaTeX stuff via APT
+  shell: apt-get install -y --no-install-recommends --no-upgrade texlive-latex-base texlive-latex-extra pgf | ts '%F %T' >> ansible_apt.log
   become: yes
   become_method: sudo
-  with_items:
-    - texlive-latex-base
-    - texlive-latex-extra
-    - pgf
   when: has_latex
 
 - name: Install FTP client via APT
@@ -140,7 +136,6 @@
     - locate
     - lsof
     - htop
-    - moreutils
 
 - name: Install npm via APT
   apt:
@@ -149,9 +144,9 @@
   become_method: sudo
   when: npm_is_from_apt
 
-- name: Install maven via APT (may take up to 15 minutes)
-  apt:
-    name: maven2
+#FIXME: this is a workaround because Ansible's APT module is way too slow on an initial rollout.
+- name: Install maven stuff via APT
+  shell: apt-get install -y --no-install-recommends --no-upgrade maven2 | ts '%F %T' >> ansible_apt.log
   become: yes
   become_method: sudo
   when: has_maven

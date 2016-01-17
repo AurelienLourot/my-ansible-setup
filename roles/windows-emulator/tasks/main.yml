@@ -1,9 +1,6 @@
 ---
+#FIXME: this is a workaround because Ansible's APT module is way too slow on an initial rollout.
 - name: Install APT packages
-  apt:
-    name: "{{ item }}"
+  shell: apt-get install -y --no-install-recommends --no-upgrade wine rdesktop | ts '%F %T' >> ansible_apt.log
   become: yes
   become_method: sudo
-  with_items:
-    - wine
-    - rdesktop

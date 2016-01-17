@@ -21,3 +21,9 @@
   command: killall update-notifier
   tags: legacy
   ignore_errors: yes
+
+- name: Install ts via APT
+  apt:
+    name: moreutils
+  become: yes
+  become_method: sudo
