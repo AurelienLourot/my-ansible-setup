@@ -25,3 +25,24 @@
     name: spotify-client
   become: yes
   become_method: sudo
+
+- name: Install libudev1 via APT
+  apt:
+    name: libudev1
+  become: yes
+  become_method: sudo
+  when: ansible_distribution_release == 'trusty'
+- name: Install libudev0 via APT
+  apt:
+    name: libudev0
+  become: yes
+  become_method: sudo
+  when: ansible_distribution_release == 'precise'
+- name: "Link libudev1 to libudev0"
+  file:
+    src: /lib/x86_64-linux-gnu/libudev.so.0
+    path: /lib/x86_64-linux-gnu/libudev.so.1
+    state: link
+  become: yes
+  become_method: sudo
+  when: ansible_distribution_release == 'precise'
