@@ -15,8 +15,8 @@
   with_items:
     - com.ubuntu.update-notifier auto-launch false
     - com.ubuntu.update-notifier hide-reboot-notification true
+  when: ansible_distribution_release == 'precise'
   tags: legacy
-  ignore_errors: yes
 - name: Kill update-notifier
   command: killall update-notifier
   tags: legacy
