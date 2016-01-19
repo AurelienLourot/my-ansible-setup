@@ -48,7 +48,7 @@
 	<entry name="delete_binding" mtime="1396449892" type="string">
 		<stringvalue>escape-sequence</stringvalue>
 	</entry>
-	<entry name="login_shell" mtime="1396449892" type="bool" value="false"/>
+	<entry name="login_shell" mtime="1396449892" type="bool" value="true"/>
 	<entry name="word_chars" mtime="1396449892" type="string">
 		<stringvalue>-A-Za-z0-9,./?%&amp;#:_=+@~</stringvalue>
 	</entry>

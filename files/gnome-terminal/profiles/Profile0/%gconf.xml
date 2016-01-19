@@ -62,7 +62,7 @@
 	<entry name="scroll_on_output" mtime="1396448973" type="bool" value="false"/>
 	<entry name="scroll_background" mtime="1396448973" type="bool" value="true"/>
 	<entry name="update_records" mtime="1396448973" type="bool" value="true"/>
-	<entry name="login_shell" mtime="1396448973" type="bool" value="false"/>
+	<entry name="login_shell" mtime="1396448973" type="bool" value="true"/>
 	<entry name="foreground_color" mtime="1396864722" type="string">
 		<stringvalue>#000000000000</stringvalue>
 	</entry>

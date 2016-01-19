@@ -67,7 +67,7 @@
 	<entry name="cursor_blink_mode" mtime="1396449773" type="string">
 		<stringvalue>system</stringvalue>
 	</entry>
-	<entry name="login_shell" mtime="1396449773" type="bool" value="false"/>
+	<entry name="login_shell" mtime="1396449773" type="bool" value="true"/>
 	<entry name="update_records" mtime="1396449773" type="bool" value="true"/>
 	<entry name="word_chars" mtime="1396449773" type="string">
 		<stringvalue>-A-Za-z0-9,./?%&amp;#:_=+@~</stringvalue>

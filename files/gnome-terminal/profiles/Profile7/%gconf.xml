@@ -36,7 +36,7 @@
 	<entry name="font" mtime="1396449905" type="string">
 		<stringvalue>Monospace 12</stringvalue>
 	</entry>
-	<entry name="login_shell" mtime="1396449905" type="bool" value="false"/>
+	<entry name="login_shell" mtime="1396449905" type="bool" value="true"/>
 	<entry name="delete_binding" mtime="1396449905" type="string">
 		<stringvalue>escape-sequence</stringvalue>
 	</entry>

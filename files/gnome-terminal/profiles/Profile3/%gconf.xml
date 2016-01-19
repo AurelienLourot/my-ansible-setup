@@ -54,7 +54,7 @@
 	<entry name="font" mtime="1396449846" type="string">
 		<stringvalue>Monospace 12</stringvalue>
 	</entry>
-	<entry name="login_shell" mtime="1396449846" type="bool" value="false"/>
+	<entry name="login_shell" mtime="1396449846" type="bool" value="true"/>
 	<entry name="alternate_screen_scroll" mtime="1396864722" type="bool" value="true"/>
 	<entry name="default_size_columns" mtime="1396449846" type="int" value="80"/>
 	<entry name="default_size_rows" mtime="1396449846" type="int" value="24"/>

@@ -37,7 +37,7 @@
 	</entry>
 	<entry name="use_custom_command" mtime="1396449858" type="bool" value="false"/>
 	<entry name="use_system_font" mtime="1396449858" type="bool" value="true"/>
-	<entry name="login_shell" mtime="1396449858" type="bool" value="false"/>
+	<entry name="login_shell" mtime="1396449858" type="bool" value="true"/>
 	<entry name="allow_bold" mtime="1396449858" type="bool" value="true"/>
 	<entry name="background_color" mtime="1396864722" type="string">
 		<stringvalue>#FFFFFFFFDDDD</stringvalue>

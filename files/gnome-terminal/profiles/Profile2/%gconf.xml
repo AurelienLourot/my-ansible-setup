@@ -55,7 +55,7 @@
 	<entry name="word_chars" mtime="1396449827" type="string">
 		<stringvalue>-A-Za-z0-9,./?%&amp;#:_=+@~</stringvalue>
 	</entry>
-	<entry name="login_shell" mtime="1396449827" type="bool" value="false"/>
+	<entry name="login_shell" mtime="1396449827" type="bool" value="true"/>
 	<entry name="use_theme_colors" mtime="1396449827" type="bool" value="true"/>
 	<entry name="use_custom_default_size" mtime="1396449827" type="bool" value="false"/>
 	<entry name="visible_name" mtime="1396864722" type="string">

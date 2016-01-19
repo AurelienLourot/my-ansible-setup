@@ -42,7 +42,7 @@
 	<entry name="cursor_shape" mtime="1396449873" type="string">
 		<stringvalue>block</stringvalue>
 	</entry>
-	<entry name="login_shell" mtime="1396449873" type="bool" value="false"/>
+	<entry name="login_shell" mtime="1396449873" type="bool" value="true"/>
 	<entry name="scroll_on_output" mtime="1396449873" type="bool" value="false"/>
 	<entry name="default_show_menubar" mtime="1396864722" type="bool" value="false"/>
 	<entry name="background_image" mtime="1396449873" type="string">
