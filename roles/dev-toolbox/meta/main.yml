@@ -4,6 +4,8 @@ dependencies:
   - role: git-client
   - role: adb-client
     when: adb_is_from_ppa
+  - role: zeal-client
+    when: has_zeal
 
   - role: create-symlink
     link_name: kwriterc

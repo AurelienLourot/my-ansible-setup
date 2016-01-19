@@ -24,6 +24,7 @@ has_ssh_agent: False
 has_maven: True
 has_mongodb: True
 has_ansible_doc: True
+has_zeal: False
 has_kuser: True
 
 # Used in extra roles outside this repository:

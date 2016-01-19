@@ -1,0 +1,10 @@
+---
+dependencies:
+  - role: link-documents
+
+  - role: create-symlink
+    link_name: Zeal.conf
+    link_path: "{{ lookup('env', 'HOME') }}/.config/Zeal"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/Zeal.conf"
