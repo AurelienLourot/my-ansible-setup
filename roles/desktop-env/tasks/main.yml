@@ -9,6 +9,9 @@
     #       ASUS C200 doesn't have enough resources to install all at once on an initial rollout.
     - xfce4-power-manager
     - mplayer2
+    - wpasupplicant
+    - printer-driver-pnm2ppa
+    - openprinting-ppds
     - lubuntu-core
     - language-selector-gnome
     - abiword
