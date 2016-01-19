@@ -1,1 +1,1 @@
-exec startlubuntu
+exec deskopen.sh /usr/share/xsessions/Lubuntu.desktop
