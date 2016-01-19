@@ -1,0 +1,12 @@
+---
+- name: "Stat Documents"
+  stat:
+    path: "{{ lookup('env', 'HOME') }}/Documents"
+  register: folder_or_link
+
+- name: "Link Documents"
+  file:
+    src: "/media/sdcard/Documents"
+    path: "{{ lookup('env', 'HOME') }}/Documents"
+    state: link
+  when: folder_or_link.stat.exists == False
