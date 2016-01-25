@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <gconf>
 	<entry name="background_type" mtime="1396864722" type="string">
-		<stringvalue>transparent</stringvalue>
+		<stringvalue>solid</stringvalue>
 	</entry>
 	<entry name="default_size_columns" mtime="1396449773" type="int" value="80"/>
-	<entry name="use_theme_colors" mtime="1396449773" type="bool" value="true"/>
+	<entry name="use_theme_colors" mtime="1453716236" type="bool" value="false"/>
 	<entry name="visible_name" mtime="1396864722" type="string">
 		<stringvalue>DesktopConsole2</stringvalue>
 	</entry>
@@ -28,7 +28,7 @@
 	</entry>
 	<entry name="silent_bell" mtime="1396449773" type="bool" value="false"/>
 	<entry name="background_color" mtime="1396864722" type="string">
-		<stringvalue>#FFFFFFFFDDDD</stringvalue>
+		<stringvalue>#000000000000</stringvalue>
 	</entry>
 	<entry name="exit_action" mtime="1396449773" type="string">
 		<stringvalue>close</stringvalue>
@@ -53,7 +53,7 @@
 	<entry name="alternate_screen_scroll" mtime="1396864722" type="bool" value="true"/>
 	<entry name="scroll_on_output" mtime="1396449773" type="bool" value="false"/>
 	<entry name="foreground_color" mtime="1396864722" type="string">
-		<stringvalue>#000000000000</stringvalue>
+		<stringvalue>#FFFFFFFFFFFF</stringvalue>
 	</entry>
 	<entry name="cursor_shape" mtime="1396449773" type="string">
 		<stringvalue>block</stringvalue>
