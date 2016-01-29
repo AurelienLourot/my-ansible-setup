@@ -16,6 +16,13 @@ dependencies:
     when: has_editors_other_than_emacs
     tags: legacy
 
+  - role: create-symlink
+    link_name: .bash_profile
+    link_path: "{{ lookup('env', 'HOME') }}"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/bash_profile"
+
   - role: line-in-file
     dest: "{{ main_bashrc_on_host }}"
     dest_description: bashrc
@@ -29,7 +36,8 @@ dependencies:
   - role: line-in-file
     dest: "{{ main_bashrc_on_host }}"
     dest_description: bashrc
-    line: "setxkbmap {{ keyboard_map }} # uuidgen-022e9c9d-93b3-43dc-ac34-e7285477b032"
+    # '|| true' because it can fail when no X started:
+    line: "setxkbmap {{ keyboard_map }} || true # uuidgen-022e9c9d-93b3-43dc-ac34-e7285477b032"
     line_description: setxkbmap
     regexp: uuidgen-022e9c9d-93b3-43dc-ac34-e7285477b032
 

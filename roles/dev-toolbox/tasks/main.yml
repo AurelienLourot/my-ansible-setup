@@ -48,6 +48,13 @@
     - ruby-all-dev
   when: has_exotic_interpreters
 
+# Also necessary for installing RVM:
+- name: Install curl via APT
+  apt:
+    name: curl
+  become: yes
+  become_method: sudo
+
 # Ubuntu's ruby-rvm is broken,
 # see http://stackoverflow.com/questions/11521237/difficulties-after-installing-rvm
 #FIXME: these tasks are executed each time:
