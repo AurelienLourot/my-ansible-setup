@@ -1,4 +1,15 @@
 ---
+- name: Install packages via APT
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    # These are dependencies of lubuntu-desktop anyway but we need them already now for the next
+    # plays:
+    - update-notifier # in order to disable it
+    - libglib2.0-bin # for gsettings
+
 #FIXME: these tasks are executed each time:
 - name: Disable update-manager and notifier
   command: "gsettings set {{ item }}"
