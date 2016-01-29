@@ -45,6 +45,22 @@
   with_items:
     - rhino
     - groovy
+    - ruby-all-dev
+  when: has_exotic_interpreters
+
+# Ubuntu's ruby-rvm is broken,
+# see http://stackoverflow.com/questions/11521237/difficulties-after-installing-rvm
+#FIXME: these tasks are executed each time:
+- name: Add GPG key for RVM
+  command: gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+  when: has_exotic_interpreters
+- name: Install RVM
+  shell: curl -sSL https://get.rvm.io | bash -s stable --ruby
+  when: has_exotic_interpreters
+
+#FIXME: this task is executed each time:
+- name: Install jekyll in RVM
+  shell: bash -c ". ~/.bash_profile && gem install jekyll"
   when: has_exotic_interpreters
 
 - name: Install python via APT
