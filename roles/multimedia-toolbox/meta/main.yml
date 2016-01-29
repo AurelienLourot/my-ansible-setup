@@ -2,3 +2,10 @@
 dependencies:
   - role: spotify-client
     when: has_spotify
+
+  - role: create-symlink
+    link_name: vlcrc
+    link_path: "{{ lookup('env', 'HOME') }}/.config/vlc"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/vlcrc"
