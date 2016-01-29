@@ -12,6 +12,10 @@
     - wpasupplicant
     - printer-driver-pnm2ppa
     - openprinting-ppds
+    - lubuntu-default-settings
+    - lubuntu-lightdm-gtk-greeter
+    - lubuntu-plymouth-theme-lubuntu-text
+    - alsa-base
     - lubuntu-core
     - language-selector-gnome
     - abiword
