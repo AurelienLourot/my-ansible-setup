@@ -231,16 +231,24 @@
   become: yes
   become_method: sudo
 
+- name: Cleanup older uncommitted
+  pip:
+    name: uncommitted
+    state: absent
+  become: yes
+  become_method: sudo
+  tags: legacy
+
 - name: Install uncommitted's dependencies
   pip:
-    requirements: "{{ role_path }}/files/uncommitted-a754c0d/requirements.txt"
+    requirements: "{{ role_path }}/files/uncommitted-2d5b199/requirements.txt"
   become: yes
   become_method: sudo
   tags: legacy
 
 - name: Install uncommitted
   pip:
-    name: "{{ role_path }}/files/uncommitted-a754c0d/uncommitted-1.6.tar.gz"
+    name: "{{ role_path }}/files/uncommitted-2d5b199/uncommitted-1.6.tar.gz"
   become: yes
   become_method: sudo
   tags: legacy
