@@ -12,6 +12,8 @@
     - wpasupplicant
     - printer-driver-pnm2ppa
     - openprinting-ppds
+    - lubuntu-artwork
+    - lubuntu-icon-theme
     - lubuntu-default-settings
     - lubuntu-lightdm-gtk-greeter
     - lubuntu-plymouth-theme-lubuntu-text
