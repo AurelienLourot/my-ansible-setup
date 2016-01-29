@@ -60,6 +60,7 @@
 /.pip/pip.log
 /.pulse
 /.rnd
+/.rvm/installed.at
 /.rvm/log
 /.semanticdb
 /.sky2/logs
