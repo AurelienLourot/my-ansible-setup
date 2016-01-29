@@ -12,6 +12,7 @@
     - acroread
     - poppler-utils # for pdfunite
     - kontact
+    - kalarm
 
 - name: Add APT key for Canon scan software
   apt_key:
