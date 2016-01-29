@@ -11,3 +11,4 @@ apt-get update
 #apt-get install ansible
 apt-get install python-support python-jinja2 python-yaml python-paramiko python-httplib2 sshpass
 dpkg -i files/ansible_1.9.4-1ppa~precise_all.deb
+apt-mark hold ansible
