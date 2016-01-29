@@ -120,6 +120,7 @@
     - telnet
     - sshpass
     - mtr
+    - dnsutils # for dig
 
 - name: Install gnome-terminal via APT
   apt:
