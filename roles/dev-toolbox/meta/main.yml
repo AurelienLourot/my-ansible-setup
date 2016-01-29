@@ -51,6 +51,13 @@ dependencies:
     tags: legacy
 
   - role: create-symlink
+    link_name: config
+    link_path: "{{ lookup('env', 'HOME') }}/.ssh"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/ssh-config"
+
+  - role: create-symlink
     link_name: .npmrc
     link_path: "{{ lookup('env', 'HOME') }}"
     # Unfortunately we can't use 'role_path'
