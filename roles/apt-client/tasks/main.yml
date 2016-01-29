@@ -13,7 +13,6 @@
 #FIXME: these tasks are executed each time:
 - name: Disable update-manager and notifier
   command: "gsettings set {{ item }}"
-  when: has_editors_other_than_emacs
   with_items:
     - com.ubuntu.update-notifier no-show-notifications true
     - com.ubuntu.update-notifier regular-auto-launch-interval 999 # days
@@ -22,7 +21,6 @@
   tags: legacy
 - name: Disable update-manager and notifier on Ubuntu 12.04
   command: "gsettings set {{ item }}"
-  when: has_editors_other_than_emacs
   with_items:
     - com.ubuntu.update-notifier auto-launch false
     - com.ubuntu.update-notifier hide-reboot-notification true
