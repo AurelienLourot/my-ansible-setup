@@ -125,3 +125,12 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/deskopen.sh"
     tags: legacy
+
+  - role: create-symlink
+    link_name: "%gconf.xml"
+    link_path: "{{ lookup('env', 'HOME') }}/.gconf/apps"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/gconf-apps.xml"
+    when: has_lubuntu_desktop
+    tags: legacy
