@@ -236,6 +236,7 @@
   pip:
     name: uncommitted
     state: absent
+  ignore_errors: yes # fails when uncommitted not installed (on first rollout)
   become: yes
   become_method: sudo
   tags: legacy
