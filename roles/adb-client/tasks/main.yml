@@ -1,4 +1,11 @@
 ---
+- name: Add APT key for adb
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 1DB29AFFF6C70907B57AA31F531EE72F4C9D234C
+  become: yes
+  become_method: sudo
+
 - name: Add APT source for adb
   apt_repository:
     repo: deb http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu precise main
@@ -8,7 +15,6 @@
 - name: Install APT package for adb
   apt:
     name: android-tools-adb
-    force: yes #FIXME shouldn't be necessary, needed probably because we haven't added the repo key
   become: yes
   become_method: sudo
 
