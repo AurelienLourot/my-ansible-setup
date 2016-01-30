@@ -4,3 +4,9 @@
 
 - include: with-p4.yml
   when: git_has_p4
+
+- name: Download latest git-prompt.sh
+  get_url:
+    url: https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+    dest: "{{ lookup('env', 'HOME') }}/bin/git-prompt.sh"
+    mode: 0775

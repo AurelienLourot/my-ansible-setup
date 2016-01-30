@@ -24,11 +24,12 @@ alias dock='xrandr --output HDMI2 --rotate right --mode 1920x1200 && xrandr --ou
 alias dock4movie='xrandr --output HDMI2 --rotate normal --mode 1920x1200 && xrandr --output eDP1 --off'
 alias undock='xrandr --output eDP1 --mode 1366x768 && xrandr --output HDMI2 --off'
 
-# git, from https://gist.github.com/616341:
+. git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWUPSTREAM="auto"
+export GIT_PS1_SHOWUPSTREAM=auto
 export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_HIDE_IF_PWD_IGNORED=true
 PS1='\u@\h:\w\[\033[1;32m\]$(__git_ps1 " [%s]")\[\033[0m\]\$ '
 
 # Solves chromium input key bug:
