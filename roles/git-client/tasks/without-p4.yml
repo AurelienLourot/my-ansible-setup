@@ -1,4 +1,11 @@
 ---
+- name: Add APT key for git
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: E1DD270288B4E6030699E45FA1715D88E1DF1F24
+  become: yes
+  become_method: sudo
+
 - name: Add APT source for git
   apt_repository:
     repo: deb http://ppa.launchpad.net/git-core/ppa/ubuntu precise main
@@ -9,8 +16,6 @@
   apt:
     name: "{{ item }}"
     state: latest
-    force: yes # necessary otherwise there is an apt-get option mismatch as we update multiple
-               # packages at once
   become: yes
   become_method: sudo
   with_items:
