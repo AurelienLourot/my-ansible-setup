@@ -33,14 +33,6 @@ dependencies:
     regexp: uuidgen-20ce84f6-6313-4d61-8641-245c42741ffb
     tags: legacy
 
-  - role: line-in-file
-    dest: "{{ main_bashrc_on_host }}"
-    dest_description: bashrc
-    # '|| true' because it can fail when no X started:
-    line: "setxkbmap {{ keyboard_map }} || true # uuidgen-022e9c9d-93b3-43dc-ac34-e7285477b032"
-    line_description: setxkbmap
-    regexp: uuidgen-022e9c9d-93b3-43dc-ac34-e7285477b032
-
   - role: create-symlink
     link_name: inputrc
     link_path: "/etc"

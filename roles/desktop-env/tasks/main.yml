@@ -36,6 +36,13 @@
     - wmctrl
   when: has_lubuntu_desktop
 
+- name: Deploy setxkb
+  template:
+    src: "{{ role_path }}/files/setxkb.sh"
+    dest: "{{ lookup('env', 'HOME') }}/bin/setxkb.sh"
+    mode: 0775
+  when: has_lubuntu_desktop
+
 - name: Deploy gnome-terminal configuration
   copy:
     src: "{{ inventory_dir }}/files/gnome-terminal"
