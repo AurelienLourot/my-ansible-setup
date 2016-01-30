@@ -1,7 +1,10 @@
 set -e
 cd ~/trash/
-if [ "$(ls -A)" ]
-then
-    # directory not empty
-    trash-put $(ls -A)
-fi
+
+OLD_IFS="$IFS"
+IFS=$'\n'
+for i in $(ls -A)
+do
+    trash-put "$i"
+done
+IFS="$OLD_IFS"
