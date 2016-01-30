@@ -50,3 +50,13 @@
   with_items:
     - "{{ lookup('env', 'HOME') }}/.local/share/configurelinux/start_icon.png"
     - "{{ lookup('env', 'HOME') }}/.local/share/configurelinux/start_icon.png.old"
+
+- name: Cleanup older purgetrash location
+  file:
+    path: "{{ item }}"
+    state: absent
+  become: yes
+  become_method: sudo
+  with_items:
+    - "/usr/local/bin/purgetrash.sh"
+    - "/usr/local/bin/purgetrash.sh.old"
