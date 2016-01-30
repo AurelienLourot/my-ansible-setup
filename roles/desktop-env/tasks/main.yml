@@ -1,37 +1,10 @@
 ---
 #FIXME: this is a workaround because Ansible's APT module is way too slow on an initial rollout.
 - name: Install lubuntu-desktop via APT
-  shell: "apt-get install -y --no-install-recommends --no-upgrade {{ item }} | ts '%F %T' >> ansible_apt.log"
+  # Without 'noninteractive', lightdm's installation hangs on "Preconfiguring packages ...":
+  shell: DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --no-upgrade lubuntu-desktop | ts '%F %T' >> ansible_apt.log
   become: yes
   become_method: sudo
-  with_items:
-    #FIXME: as a workaround, we pre-install a couple of lubuntu-desktop deps because the chromebook
-    #       ASUS C200 doesn't have enough resources to install all at once on an initial rollout.
-    - xfce4-power-manager
-    - mplayer2
-    - wpasupplicant
-    - printer-driver-pnm2ppa
-    - openprinting-ppds
-    - lubuntu-artwork
-    - lubuntu-icon-theme
-    - lubuntu-default-settings
-    - lubuntu-lightdm-gtk-greeter
-    - lubuntu-plymouth-theme-lubuntu-text
-    - alsa-base
-    - lubuntu-core
-    - language-selector-gnome
-    - abiword
-    - audacious
-    - evince
-    - gnome-mplayer
-    - xfburn
-    - usb-creator-gtk
-    - transmission-gtk
-    - pidgin
-    - blueman
-    - cups
-    - system-config-printer-gnome
-    - lubuntu-desktop
   when: has_lubuntu_desktop
 
 - name: Install Lua for devilspie2
