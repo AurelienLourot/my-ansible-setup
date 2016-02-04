@@ -19,6 +19,7 @@ alias spotify='env LC_NUMERIC=en_US.utf8 spotify'
 alias trsh='bash ${ansibleInventoryDir}/files/trash.sh'
 alias gitupdate='bash ${ansibleInventoryDir}/files/gitupdate.sh'
 alias homesize='bash ${ansibleInventoryDir}/files/homesize.sh'
+alias find_forks='python ~/Documents/git/find_forks'
 
 alias dock='xrandr --output HDMI2 --rotate right --mode 1920x1200 && xrandr --output eDP1 --off'
 alias dock4movie='xrandr --output HDMI2 --rotate normal --mode 1920x1200 && xrandr --output eDP1 --off'
