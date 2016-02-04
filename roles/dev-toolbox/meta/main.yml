@@ -2,6 +2,7 @@
 dependencies:
   - role: add-sudoers
   - role: git-client
+  - role: link-documents
   - role: adb-client
     when: adb_is_from_ppa
   - role: zeal-client
