@@ -17,6 +17,10 @@
       fail:
         msg: Inconsistent variables
       when: has_spotify and is_multimedia_toolbox == False
+    - name: "bad: has_deluge and !is_multimedia_toolbox"
+      fail:
+        msg: Inconsistent variables
+      when: has_deluge and is_multimedia_toolbox == False
     - name: "bad: npm_is_from_apt and !has_npm"
       fail:
         msg: Inconsistent variables

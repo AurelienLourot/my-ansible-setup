@@ -3,6 +3,9 @@ dependencies:
   - role: spotify-client
     when: has_spotify
 
+  - role: torrent-client
+    when: has_deluge
+
   - role: create-symlink
     link_name: vlcrc
     link_path: "{{ lookup('env', 'HOME') }}/.config/vlc"
