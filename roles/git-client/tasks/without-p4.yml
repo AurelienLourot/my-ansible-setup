@@ -1,25 +1,13 @@
 ---
-- name: Add APT key for git
-  apt_key:
-    keyserver: keyserver.ubuntu.com
-    id: E1DD270288B4E6030699E45FA1715D88E1DF1F24
-  become: yes
-  become_method: sudo
-
-- name: Add APT source for git
-  apt_repository:
-    repo: deb http://ppa.launchpad.net/git-core/ppa/ubuntu precise main
-  become: yes
-  become_method: sudo
-
 - name: Install git
   apt:
-    name: "{{ item }}"
-    state: latest
+    deb: "{{ item }}"
   become: yes
   become_method: sudo
   with_items:
-    - git
-    - git-man
-    - git-gui
-    - gitk
+    # git 2.7 breaks the "email = (none)" feature. See ongoing discussion at
+    # http://www.spinics.net/lists/git/msg267338.html
+    - "{{ role_path }}/files/git_2.4.6-0ppa1-ubuntu14.10.1_amd64.deb"
+    - "{{ role_path }}/files/git-man_2.4.6-0ppa1-ubuntu14.10.1_all.deb"
+    - "{{ role_path }}/files/git-gui_2.4.6-0ppa1-ubuntu14.10.1_all.deb"
+    - "{{ role_path }}/files/gitk_2.4.6-0ppa1-ubuntu14.10.1_all.deb"
