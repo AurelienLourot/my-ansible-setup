@@ -8,7 +8,7 @@
 
 - name: Add APT source for adb
   apt_repository:
-    repo: deb http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu precise main
+    repo: deb http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu trusty main
   become: yes
   become_method: sudo
 
