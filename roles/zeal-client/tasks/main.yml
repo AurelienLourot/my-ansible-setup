@@ -17,3 +17,13 @@
     name: zeal
   become: yes
   become_method: sudo
+
+- name: Deploy Zeal.conf
+  template:
+    src: "{{ role_path }}/files/Zeal.conf"
+    dest: "{{ lookup('env', 'HOME') }}/.config/Zeal/Zeal.conf"
+
+- name: Cleanup older Zeal.conf backup
+  file:
+    path: "{{ lookup('env', 'HOME') }}/.config/Zeal/Zeal.conf.old"
+    state: absent
