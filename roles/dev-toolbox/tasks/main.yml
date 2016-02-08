@@ -289,6 +289,15 @@
   become_method: sudo
   tags: legacy
 
+- name: "Add dell to hosts"
+  lineinfile:
+    dest: /etc/hosts
+    line: "10.111.8.224 dell # uuidgen-d59d7690-21b7-4cb1-b323-f8d8c79674ef"
+    regexp: uuidgen-d59d7690-21b7-4cb1-b323-f8d8c79674ef
+  become: yes
+  become_method: sudo
+  tags: legacy
+
 - name: Generate ssh key pair
   user:
     name: "{{ username }}"
