@@ -1,3 +1,5 @@
 ---
 dependencies:
   - role: add-apt-partner-source
+  - role: grive-client
+    when: has_grive

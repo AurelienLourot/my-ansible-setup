@@ -1,0 +1,13 @@
+---
+- name: Add APT webupd8 key
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 1DB29AFFF6C70907B57AA31F531EE72F4C9D234C
+  become: yes
+  become_method: sudo
+
+- name: Add APT webupd8 source
+  apt_repository:
+    repo: deb http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu trusty main
+  become: yes
+  become_method: sudo

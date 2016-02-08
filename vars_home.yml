@@ -9,6 +9,7 @@ keyboard_map: de
 is_windows_emulator: True
 has_lubuntu_desktop: True
 is_office_toolbox: True
+has_grive: True
 is_com_toolbox: True
 is_web_browser: True
 is_laptop: True

@@ -1,0 +1,6 @@
+---
+- name: Install APT package for grive
+  apt:
+    name: grive
+  become: yes
+  become_method: sudo
