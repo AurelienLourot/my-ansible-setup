@@ -32,8 +32,26 @@
     - gnome-control-center
     - network-manager-gnome
     - xscreensaver
-    - xdotool
     - wmctrl
+  when: has_lubuntu_desktop
+
+- name: Install xdotool's dependencies
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - libxtst-dev
+    - libxinerama-dev
+    - libxkbcommon-dev
+  when: has_lubuntu_desktop
+
+- name: Install xdotool
+  command: make install
+  args:
+    chdir: "{{ role_path }}/files/xdotool-2d7c391"
+  become: yes
+  become_method: sudo
   when: has_lubuntu_desktop
 
 - name: Deploy setxkb
