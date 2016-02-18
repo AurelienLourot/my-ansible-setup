@@ -1,12 +1,4 @@
 ---
-- name: Cleanup deprecated APT source for spotify
-  apt_repository:
-    repo: deb http://repository.spotify.com precise stable non-free
-    state: absent
-    update_cache: no
-  become: yes
-  become_method: sudo
-
 - name: Add APT key for spotify
   apt_key:
     keyserver: keyserver.ubuntu.com
