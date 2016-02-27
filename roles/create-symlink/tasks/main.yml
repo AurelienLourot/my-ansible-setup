@@ -68,12 +68,18 @@
     src: "{{ target }}"
     path: "{{ link }}"
     state: link
+    # Necessary if there is already a file in place of the link. This is necessary, for example, for
+    # vlcrc because the VLC settings editor keep replacing our link by a new file.
+    force: yes
   when: with_sudo|bool == False
 - name: "Link {{ link_name }}"
   file:
     src: "{{ target }}"
     path: "{{ link }}"
     state: link
+    # Necessary if there is already a file in place of the link. This is necessary, for example, for
+    # vlcrc because the VLC settings editor keep replacing our link by a new file.
+    force: yes
   when: with_sudo|bool
   become: yes
   become_method: sudo
