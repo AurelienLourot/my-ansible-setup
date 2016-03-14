@@ -121,6 +121,7 @@
     - sshpass
     - mtr
     - dnsutils # for dig
+    - tftp
 
 - name: Install gnome-terminal via APT
   apt:
