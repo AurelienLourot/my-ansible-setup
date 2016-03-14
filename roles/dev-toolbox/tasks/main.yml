@@ -162,13 +162,6 @@
     - lsof
     - htop
 
-- name: Install npm via APT
-  apt:
-    name: npm
-  become: yes
-  become_method: sudo
-  when: npm_is_from_apt
-
 #FIXME: this is a workaround because Ansible's APT module is way too slow on an initial rollout.
 - name: Install maven stuff via APT
   shell: apt-get install -y --no-install-recommends --no-upgrade maven2 | ts '%F %T' >> ansible_apt.log

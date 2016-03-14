@@ -25,7 +25,3 @@
       fail:
         msg: Inconsistent variables
       when: has_grive and is_office_toolbox == False
-    - name: "bad: npm_is_from_apt and !has_npm"
-      fail:
-        msg: Inconsistent variables
-      when: npm_is_from_apt and has_npm == False
