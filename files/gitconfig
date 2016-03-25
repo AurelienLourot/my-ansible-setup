@@ -13,6 +13,7 @@
         lol = log --graph --decorate --pretty=oneline --abbrev-commit
         lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
         rpupdate = remote update --prune
+        s = status
         confemailhome = config user.email "aurelien.lourot@gmail.com"
         confemailwork = config user.email "aurelien.lourot@tomtom.com"
 
