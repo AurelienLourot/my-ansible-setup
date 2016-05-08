@@ -18,6 +18,7 @@ alias todo='cat ~/Documents/git/perso/systeme/todo.txt'
 alias spotify='env LC_NUMERIC=en_US.utf8 spotify'
 alias trsh='bash ${ansibleInventoryDir}/files/trash.sh'
 alias gitupdate='bash ${ansibleInventoryDir}/files/gitupdate.sh'
+alias update='bash ${ansibleInventoryDir}/files/update.sh'
 alias homesize='bash ${ansibleInventoryDir}/files/homesize.sh'
 alias find_forks='python ~/Documents/git/find_forks'
 
