@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
-cd ~/Documents/git/google-drive/grive/
+set -e
+
+ROOT_DIR=~/Documents/git/
+
+cd $ROOT_DIR/google-drive/grive/
 grive
+
+cd $ROOT_DIR/cliist/
+./cliist.py -A > $ROOT_DIR/todoist/todoist.txt
 
 SCRIPT_DIR=$(dirname $0)
 $SCRIPT_DIR/gitupdate.sh
