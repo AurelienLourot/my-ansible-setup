@@ -30,7 +30,7 @@
 /.java/.userPrefs/.user*
 /.juniper_networks
 /.kde/cache-localhost
-/.kde/share/apps/kalarm
+/.kde/share/apps/*kalarm*
 /.kde/share/apps/gwenview/recentfolders
 /.kde/share/apps/nepomuk/repository/main/data/virtuosobackend/soprano-virtuoso*
 /.kde/share/apps/okular/docdata
