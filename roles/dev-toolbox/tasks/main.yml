@@ -277,26 +277,6 @@
   become_method: sudo
   tags: legacy
 
-- name: Generate ssh key pair
-  user:
-    name: "{{ username }}"
-    generate_ssh_key: yes
-  when: has_ssh_agent
-
-- name: Authorize ssh public key
-  authorized_key:
-    user: "{{ username }}"
-    key: "{{ lookup('file', item + '/.ssh/id_rsa.pub') }}"
-  with_items:
-    - "{{ lookup('env', 'HOME') }}"
-  when: has_ssh_agent
-
-#FIXME: this task is executed each time:
-- name: Add ssh private key to agent
-  command: ssh-add
-  when: has_ssh_agent
-  #FIXME: fails on workstation: tags: legacy
-
 #FIXME: this task is executed each time:
 # Note: you can list gedit settings with `gsettings list-recursively | grep -i gedit`.
 - name: Configure gedit
