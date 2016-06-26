@@ -1,7 +1,6 @@
 ---
 git_has_p4: True
 adb_is_from_ppa: False
-has_heimdall: False
 is_multimedia_toolbox: True
 has_spotify: False
 has_deluge: False

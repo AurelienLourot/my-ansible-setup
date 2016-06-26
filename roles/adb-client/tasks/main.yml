@@ -4,13 +4,3 @@
     name: android-tools-adb
   become: yes
   become_method: sudo
-
-- name: Install APT packages for heimdall
-  apt:
-    name: "{{ item }}"
-  become: yes
-  become_method: sudo
-  with_items:
-    - heimdall-flash
-    - heimdall-flash-frontend
-  when: has_heimdall
