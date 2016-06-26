@@ -5,14 +5,12 @@
   shell: DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --no-upgrade lubuntu-desktop | ts '%F %T' >> ansible_apt.log
   become: yes
   become_method: sudo
-  when: has_lubuntu_desktop
 
 - name: Install Lua for devilspie2
   apt:
     name: lua5.2
   become: yes
   become_method: sudo
-  when: has_lubuntu_desktop
   tags: legacy
 
 - name: Install recent devilspie2
@@ -20,7 +18,6 @@
     deb: "{{ role_path }}/files/devilspie2_0.39-4_amd64.deb"
   become: yes
   become_method: sudo
-  when: has_lubuntu_desktop
   tags: legacy
 
 - name: Install other APT packages
@@ -33,7 +30,6 @@
     - network-manager-gnome
     - xscreensaver
     - wmctrl
-  when: has_lubuntu_desktop
 
 - name: Install xdotool's dependencies
   apt:
@@ -44,7 +40,6 @@
     - libxtst-dev
     - libxinerama-dev
     - libxkbcommon-dev
-  when: has_lubuntu_desktop
 
 - name: Install xdotool
   command: make install
@@ -52,18 +47,15 @@
     chdir: "{{ role_path }}/files/xdotool-2d7c391"
   become: yes
   become_method: sudo
-  when: has_lubuntu_desktop
 
 - name: Deploy setxkb
   template:
     src: "{{ role_path }}/files/setxkb.sh"
     dest: "{{ lookup('env', 'HOME') }}/bin/setxkb.sh"
     mode: 0775
-  when: has_lubuntu_desktop
 
 - name: Deploy gnome-terminal configuration
   copy:
     src: "{{ inventory_dir }}/files/gnome-terminal"
     dest: "{{ lookup('env', 'HOME') }}/.gconf/apps"
-  when: has_lubuntu_desktop
   tags: legacy

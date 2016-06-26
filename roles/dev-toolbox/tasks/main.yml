@@ -13,7 +13,6 @@
   with_items:
     - kwrite
     - gedit
-  when: has_editors_other_than_emacs
 
 - name: Install coding tools via APT
   apt:
@@ -24,7 +23,6 @@
     - kompare
     - kdiff3
     - pandoc
-  when: has_coding_tools
   tags: legacy
 
 - name: Install SCM clients via APT
@@ -35,7 +33,6 @@
   with_items:
     - mercurial
     - subversion
-  when: has_scm_other_than_git
 
 - name: Install interpreters via APT
   apt:
@@ -46,7 +43,6 @@
     - rhino
     - groovy
     - ruby-all-dev
-  when: has_exotic_interpreters
 
 # Also necessary for installing RVM:
 - name: Install curl via APT
@@ -60,15 +56,12 @@
 #FIXME: these tasks are executed each time:
 - name: Add GPG key for RVM
   command: gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-  when: has_exotic_interpreters
 - name: Install RVM
   shell: curl -sSL https://get.rvm.io | bash -s stable --ruby
-  when: has_exotic_interpreters
 
 #FIXME: this task is executed each time:
 - name: Install jekyll in RVM
   shell: bash -c ". ~/.bash_profile && gem install jekyll"
-  when: has_exotic_interpreters
 
 - name: Install python via APT
   apt:
@@ -88,28 +81,24 @@
     - pychecker
     - pylint
     - pyflakes
-  when: has_coding_tools
 
 #FIXME: this is a workaround because Ansible's APT module is way too slow on an initial rollout.
 - name: Install LaTeX stuff via APT
   shell: apt-get install -y --no-install-recommends --no-upgrade texlive-latex-base texlive-latex-extra pgf | ts '%F %T' >> ansible_apt.log
   become: yes
   become_method: sudo
-  when: has_latex
 
 - name: Install FTP client via APT
   apt:
     name: gftp
   become: yes
   become_method: sudo
-  when: has_ftp_client
 
 - name: Install MySQL client via APT
   apt:
     name: mysql-client
   become: yes
   become_method: sudo
-  when: has_mysql_client
 
 - name: Install other network clients via APT
   apt:
@@ -128,7 +117,6 @@
     name: gnome-terminal
   become: yes
   become_method: sudo
-  when: has_lubuntu_desktop
 
 - name: Install shell tools via APT
   apt:
@@ -149,7 +137,6 @@
     name: kuser
   become: yes
   become_method: sudo
-  when: has_kuser
 
 - name: Install other system tools via APT
   apt:
@@ -167,28 +154,24 @@
   shell: apt-get install -y --no-install-recommends --no-upgrade maven2 | ts '%F %T' >> ansible_apt.log
   become: yes
   become_method: sudo
-  when: has_maven
 
 - name: Install MongoDB via APT
   apt:
     name: mongodb
   become: yes
   become_method: sudo
-  when: has_mongodb
 
 - name: Install gmrun via APT
   apt:
     name: gmrun
   become: yes
   become_method: sudo
-  when: has_lubuntu_desktop
 
 - name: Install ansible-doc via APT
   apt:
     name: ansible-doc
   become: yes
   become_method: sudo
-  when: has_ansible_doc
 
 # ia32-libs has been replaced by the following packages:
 - name: Install ia32-libs via APT
@@ -281,7 +264,6 @@
 # Note: you can list gedit settings with `gsettings list-recursively | grep -i gedit`.
 - name: Configure gedit
   command: "gsettings set {{ item }}"
-  when: has_editors_other_than_emacs
   with_items:
     - org.gnome.gedit.preferences.editor create-backup-copy false
     - org.gnome.gedit.preferences.editor display-line-numbers true

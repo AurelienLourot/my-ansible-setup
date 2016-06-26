@@ -6,7 +6,6 @@ dependencies:
   - role: adb-client
     when: adb_is_from_ppa
   - role: zeal-client
-    when: has_zeal
 
   - role: create-symlink
     link_name: kwriterc
@@ -14,7 +13,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/kwriterc"
-    when: has_editors_other_than_emacs
     tags: legacy
 
   - role: create-symlink
@@ -56,7 +54,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/npmrc"
-    when: has_npm
 
   - role: create-symlink
     link_name: .hgrc
@@ -64,7 +61,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/hgrc"
-    when: has_scm_other_than_git
 
   - role: create-symlink
     link_name: .pylintrc
@@ -72,7 +68,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/pylintrc"
-    when: has_coding_tools
     tags: legacy
 
   - role: create-symlink
@@ -88,7 +83,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/focusDesktopConsole.py"
-    when: has_lubuntu_desktop
     tags: legacy
 
   - role: create-symlink
@@ -97,7 +91,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/focusDesktopConsole.sh"
-    when: has_lubuntu_desktop
     tags: legacy
 
   - role: create-symlink
@@ -106,5 +99,4 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/DesktopConsole.lua"
-    when: has_lubuntu_desktop
     tags: legacy

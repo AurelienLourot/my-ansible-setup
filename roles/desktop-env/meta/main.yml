@@ -8,7 +8,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/xinitrc"
-    when: has_lubuntu_desktop
     tags: legacy
 
   - role: create-symlink
@@ -18,7 +17,6 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/start_icon.png"
     with_sudo: yes
-    when: has_lubuntu_desktop
     tags: legacy
 
   - role: create-symlink
@@ -27,7 +25,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/autostart.desktop"
-    when: has_lubuntu_desktop
 
   #FIXME: a 'with_items' loop would be better, however not trivial with roles:
   - role: create-symlink
@@ -36,7 +33,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/libfm"
-    when: has_lubuntu_desktop
     tags: legacy
   - role: create-symlink
     link_name: pcmanfm
@@ -44,7 +40,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/pcmanfm"
-    when: has_lubuntu_desktop
     tags: legacy
   - role: create-symlink
     link_name: lxpanel
@@ -52,7 +47,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/lxpanel"
-    when: has_lubuntu_desktop
     tags: legacy
   - role: create-symlink
     link_name: lxterminal
@@ -60,7 +54,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/lxterminal"
-    when: has_lubuntu_desktop
     tags: legacy
   - role: create-symlink
     link_name: openbox
@@ -68,7 +61,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/openbox"
-    when: has_lubuntu_desktop
     tags: legacy
 
   - role: create-symlink
@@ -78,7 +70,6 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/lightdm-gtk-greeter-config-derivative"
     with_sudo: yes
-    when: has_lubuntu_desktop
     tags: legacy
 
   - role: create-symlink
@@ -88,7 +79,6 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/logind.conf"
     with_sudo: yes
-    when: has_lubuntu_desktop
     tags: legacy
 
   - role: create-symlink
@@ -108,7 +98,6 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/autostart.sh"
     with_sudo: yes
-    when: has_lubuntu_desktop
 
   - role: create-symlink
     link_name: purgetrash.sh
@@ -132,5 +121,4 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/gconf-apps.xml"
-    when: has_lubuntu_desktop
     tags: legacy
