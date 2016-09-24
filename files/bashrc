@@ -25,6 +25,8 @@ alias find_forks='python ~/Documents/git/find_forks'
 alias dock='xrandr --output HDMI2 --rotate right --mode 1920x1200 && xrandr --output eDP1 --off'
 alias dock4movie='xrandr --output HDMI2 --rotate normal --mode 1920x1200 && xrandr --output eDP1 --off'
 alias undock='xrandr --output eDP1 --mode 1366x768 && xrandr --output HDMI2 --off'
+alias night='xrandr --output eDP1 --brightness .4 --gamma .6:.6:.6'
+alias day='xrandr --output eDP1 --brightness 1 --gamma 1:1:1'
 
 . ~/bin/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=true
