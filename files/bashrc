@@ -13,7 +13,7 @@ export EDITOR=~/bin/emacsclient.sh
 alias ls='ls --color'
 alias ll='ls -alF'
 
-alias cdd='cd ~/Documents/git/website/'
+alias cdd='cd ~/Documents/git/myberl.in/'
 alias todo='cat ~/Documents/git/perso/systeme/todo.txt'
 alias spotify='env LC_NUMERIC=en_US.utf8 spotify'
 alias trsh='bash ${ansibleInventoryDir}/files/trash.sh'
