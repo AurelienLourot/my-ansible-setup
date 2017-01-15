@@ -19,6 +19,7 @@
 /.dbus/session-bus
 /.fontconfig
 /.gconf/apps/gnome-terminal/profiles
+/.gem
 /.gksu.lock
 /.gmrun_history
 /.gnupg
