@@ -11,6 +11,7 @@
 /.config/ibus/bus
 /.config/libreoffice/*/user/*/*cache
 /.config/pulse
+/.config/spotify/Users
 /.config/tel.red/sky.conf
 /.config/VirtualBox/*.dat
 /.config/VirtualBox/*.log*
@@ -41,6 +42,8 @@
 /.local/share/akonadi/*db_data
 /.local/share/akonadi/*.error*
 /.local/share/akonadi/socket-*
+/.local/share/application/*.desktop
+/.local/share/contacts
 /.local/share/gvfs-metadata
 /.local/share/icc
 /.local/share/icons
@@ -55,10 +58,13 @@
 /.macromedia
 /.mozilla/firefox
 /.msjnc.log
+/.node-gyp
+/.npm
 /.nv/GLCache
 /.p4tickets
 /.pip/pip.log
 /.pulse
+/.qws
 /.rnd
 /.rvm/installed.at
 /.rvm/log
@@ -66,7 +72,9 @@
 /.sky2/logs
 /.Skype
 /.snapshot
+/.subversion
 /.thumbnails
+/.tox
 /.VirtualBox/*.dat
 /.VirtualBox/*.log*
 /.VirtualBox/*-prev
