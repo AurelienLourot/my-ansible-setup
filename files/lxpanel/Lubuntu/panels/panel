@@ -77,6 +77,21 @@ Plugin {
 }
 
 Plugin {
+    type = xkb
+    Config {
+        DisplayType=0
+        PerWinLayout=0
+        NoResetOpt=0
+        KeepSysLayouts=1
+        Model=pc105
+        LayoutsList=de
+        VariantsList=,
+        ToggleOpt=shift_caps_toggle
+        FlagSize=1
+    }
+}
+
+Plugin {
     type = dclock
     Config {
         ClockFmt=%a %Y-%m-%d | %R

@@ -3,7 +3,7 @@ git_has_p4: True
 adb_is_from_ppa: False
 has_spotify: False
 has_deluge: False
-keyboard_map: us
+keyboard_map: us,ar
 has_grive: False
 
 # Used in extra roles outside this repository:
