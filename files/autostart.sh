@@ -13,6 +13,7 @@ sudo cron
 purgetrash.sh
 
 pgrep nm-applet || nm-applet &
+onboard &
 
 devilspie2 &
 for i in $(seq 1 8)
