@@ -15,6 +15,11 @@ do
         failed_repos="${failed_repos}$(pwd)\n"
     fi
 
+    if [[ "$1" == "-p" ]]
+    then
+        git pull
+    fi
+
     branches_behind=`git branch -v | grep behind`
     if [[ ! -z "$branches_behind" ]]
     then
