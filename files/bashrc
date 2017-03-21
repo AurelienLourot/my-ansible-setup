@@ -47,3 +47,8 @@ export XMODIFIERS=''
 
 # User-specific commands:
 export PATH="~/bin:${PATH}"
+
+export GOROOT=~/bin/go
+export GOPATH=~/gocode
+export PATH=$GOROOT/bin:$PATH
+export PATH=$GOPATH/bin:$PATH
