@@ -7,8 +7,11 @@ ROOT_DIR=~/Documents/git/
 cd $ROOT_DIR/google-drive/grive/
 grive
 
-cd $ROOT_DIR/myberl.in/snapshots/maps/thirdparty/
-./download.sh
+for repo in myberl.in mybeir.ut
+do
+    cd $ROOT_DIR/$repo/snapshots/maps/thirdparty/
+    ./download.sh
+done
 
 cd $ROOT_DIR/todoist/
 todoist s
