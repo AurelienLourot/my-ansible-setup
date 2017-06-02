@@ -28,6 +28,8 @@ alias dock4movieAtRomu='xrandr --output HDMI2 --rotate normal --mode 1920x1200 &
 alias undock='xrandr --output eDP1 --mode 1366x768 && xrandr --output HDMI1 --off'
 alias undockAtRomu='xrandr --output eDP1 --mode 1366x768 && xrandr --output HDMI2 --off'
 alias night='xrandr --output eDP1 --brightness .4 --gamma .6:.6:.6'
+alias nightAtDell='xrandr --output LVDS1 --brightness .4 --gamma .6:.6:.6'
+alias sunAtDell='xrandr --output LVDS1 --brightness 1 --gamma 1:1:1'
 alias day='xrandr --output eDP1 --brightness 1 --gamma 1:1:1'
 
 . ~/bin/git-prompt.sh
