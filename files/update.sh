@@ -4,6 +4,9 @@ set -e
 
 ROOT_DIR=~/Documents/git/
 
+cd $ROOT_DIR/dkb-visa-output/
+./update.sh
+
 cd $ROOT_DIR/google-drive/grive/
 grive
 
