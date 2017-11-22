@@ -14,6 +14,9 @@
         lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
         rpupdate = remote update --prune
         s = status
+        branch-name = rev-parse --abbrev-ref HEAD
+        remote-name = !git config branch.$(git branch-name).remote
+        pushforce = !REMOTE=$(git remote-name) && git push $REMOTE :$(git branch-name) && git push --set-upstream $REMOTE $(git branch-name)
         confemailhome = config user.email "aurelien.lourot@gmail.com"
         confemailwork = config user.email "aurelien.lourot@tomtom.com"
 
