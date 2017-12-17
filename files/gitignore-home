@@ -1,3 +1,4 @@
+/.adobe/Acrobat
 /.ansible/tmp
 /.bash_history
 /.cache
@@ -11,29 +12,38 @@
 /.config/ibus/bus
 /.config/libreoffice/*/user/*/*cache
 /.config/pulse
+/.config/Slack/logs
+/.config/Slack/storage
 /.config/spotify/Users
 /.config/tel.red/sky.conf
 /.config/VirtualBox/*.dat
 /.config/VirtualBox/*.log*
 /.config/VirtualBox/*-prev
 /.dbus/session-bus
+/.docker/machine
 /.fontconfig
 /.gconf/apps/gnome-terminal/profiles
 /.gem
 /.gksu.lock
 /.gmrun_history
+/.gnome/apps/chrome-*.desktop
 /.gnupg
 /.googleearth
 /.gradle
+/.groovy/groovysh.history
 /.gstreamer-0.10
 /.ICEauthority
 /.icedtea/cache
 /.IdeaIC15/system
+/.ivy2
 /.java/.userPrefs/.user*
+/.joe_state
 /.juniper_networks
 /.kde/cache-localhost
 /.kde/share/apps/*kalarm*
+/.kde/share/apps/akonadi_migration_agent
 /.kde/share/apps/gwenview/recentfolders
+/.kde/share/apps/kconf_update
 /.kde/share/apps/nepomuk/repository/main/data/virtuosobackend/soprano-virtuoso*
 /.kde/share/apps/okular/docdata
 /.kde/share/apps/RecentDocuments
@@ -43,7 +53,7 @@
 /.local/share/akonadi/*db_data
 /.local/share/akonadi/*.error*
 /.local/share/akonadi/socket-*
-/.local/share/application/*.desktop
+/.local/share/applications/*.desktop
 /.local/share/contacts
 /.local/share/gvfs-metadata
 /.local/share/icc
@@ -56,6 +66,7 @@
 /.local/share/unity-webapps
 /.local/share/Zeal
 /.local/share/zeitgeist
+/.m2/repository
 /.macromedia
 /.mozilla/firefox
 /.msjnc.log
@@ -64,21 +75,40 @@
 /.nv/GLCache
 /.p4tickets
 /.pip/pip.log
+/.python_history
 /.pulse
 /.qws
 /.rnd
+/.rvm/archives
+/.rvm/bin
+/.rvm/docs
+/.rvm/gem-cache
+/.rvm/gems
+/.rvm/help
 /.rvm/installed.at
+/.rvm/LICENSE
 /.rvm/log
+/.rvm/man
+/.rvm/patches
+/.rvm/patchsets
+/.rvm/README
+/.rvm/rubies
+/.rvm/scripts
+/.rvm/src
+/.rvm/VERSION
+/.rvm/wrappers
 /.semanticdb
 /.sky2/logs
 /.Skype
 /.snapshot
+/.ssh/known_hosts*
 /.subversion
 /.thumbnails
 /.tox
 /.VirtualBox/*.dat
 /.VirtualBox/*.log*
 /.VirtualBox/*-prev
+/.viminfo
 /.wine
 /.wync2/logs
 /.Xauthority
@@ -95,10 +125,13 @@
 .nfs*
 
 # chromium:
+*-journal
 .org.chromium.Chromium.*
+Affiliation Database
 Application Cache
 Avatars
 Bookmarks*
+BrowserMetrics*
 Cache
 Certificate Revocation Lists
 chrome_shutdown_ms.txt
@@ -114,13 +147,12 @@ Extension Rules
 Extension State
 Extensions
 Favicons
-Favicons-journal
 File System
+Google Profile Picture.png
 GCM Store
 GPUCache
 History
 History Provider Cache
-History-journal
 IndexedDB
 Last Session
 Last Tabs
@@ -129,31 +161,27 @@ Local Extension Settings
 Local State
 Local Storage
 Login Data
-Login Data-journal
 Network Action Predictor
-Network Action Predictor-journal
 Network Persistent State
 Origin Bound Certs
-Origin Bound Certs-journal
 Platform Notifications
 Preferences
 QuotaManager*
 Safe Browsing *
 Service Worker
 Session Storage
+Shockwave Flash
 Shortcuts
-Shortcuts-journal
 SingletonCookie
 SingletonLock
 SingletonSocket
 Sync App Settings
 Sync Data
+Sync Data Backup
 Sync Extension Settings
 Top Sites
-Top Sites-journal
 TransportSecurity
 Visited Links
 Web Data
-Web Data-journal
 WebRTCIdentityStore
-WebRTCIdentityStore-journal
+WebRTC Logs
