@@ -122,3 +122,11 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/gconf-apps.xml"
     tags: legacy
+
+  - role: create-symlink
+    link_name: mount_encrypted_sdcard.sh
+    link_path: "{{ lookup('env', 'HOME') }}/bin"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/mount_encrypted_sdcard.sh"
+    with_sudo: yes

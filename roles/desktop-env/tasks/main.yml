@@ -59,3 +59,9 @@
     src: "{{ inventory_dir }}/files/gnome-terminal"
     dest: "{{ lookup('env', 'HOME') }}/.gconf/apps"
   tags: legacy
+
+- name: Install cryptsetup for mount_encrypted_sdcard.sh
+  apt:
+    name: cryptsetup
+  become: yes
+  become_method: sudo
