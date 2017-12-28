@@ -4,8 +4,11 @@ set -e
 
 ROOT_DIR=~/Documents/git/
 
-cd $ROOT_DIR/dkb-visa-output/
-./update.sh
+for i in dkb-visa quizler
+do
+    cd $ROOT_DIR/$i-output/
+    ./update.sh
+done
 
 cd $ROOT_DIR/google-drive/grive/
 grive
