@@ -18,6 +18,7 @@ echo "Once mounted, unmount with: sudo umount $mountPoint && sudo cryptsetup -q 
 if ! sudo cryptsetup isLuks $device
 then
   echo "Formatting device with LUKS"
+  read -p "Press enter to continue..."
   echo -n "$key" | sudo cryptsetup -q luksFormat $device
   echo -n "$key" | sudo cryptsetup -q luksOpen $device $name
   sudo mkfs.ext4 -m0 /dev/mapper/$name
