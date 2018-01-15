@@ -3,6 +3,7 @@
 xhost +  # allows any user to start X apps
 
 setxkb.sh
+xbindkeys -f ~/.xbindkeysrc.scm
 
 # Mount sdcard on chromebook:
 sudo /usr/local/bin/mount_sdcard.sh
