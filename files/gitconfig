@@ -8,8 +8,6 @@
         numbered = auto
 
 [alias]
-        co = checkout
-        ci = commit -s
         lol = log --graph --decorate --pretty=oneline --abbrev-commit
         lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
         rpupdate = remote update --prune
@@ -17,6 +15,7 @@
         branch-name = rev-parse --abbrev-ref HEAD
         remote-name = !git config branch.$(git branch-name).remote
         pushforce = !REMOTE=$(git remote-name) && git push $REMOTE :$(git branch-name) && git push --set-upstream $REMOTE $(git branch-name)
+        updatetag = "!f() { git tag -f $1 && git push -f --tags; }; f"
         confemailhome = config user.email "aurelien.lourot@gmail.com"
         confemailwork = config user.email "aurelien.lourot@tomtom.com"
 
