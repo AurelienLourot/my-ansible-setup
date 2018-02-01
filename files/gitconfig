@@ -16,6 +16,7 @@
         remote-name = !git config branch.$(git branch-name).remote
         pushforce = !REMOTE=$(git remote-name) && git push $REMOTE :$(git branch-name) && git push --set-upstream $REMOTE $(git branch-name)
         updatetag = "!f() { git tag -f $1 && git push -f --tags; }; f"
+        rmb = "!f() { git branch -D $2 && git push $1 :$2; }; f"
         confemailhome = config user.email "aurelien.lourot@gmail.com"
         confemailwork = config user.email "aurelien.lourot@tomtom.com"
 
