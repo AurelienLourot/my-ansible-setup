@@ -4,7 +4,7 @@ set -e
 
 ROOT_DIR=~/Documents/git/
 
-for i in dkb-visa quizler
+for i in dkb-visa my-gmaps quizler
 do
     cd $ROOT_DIR/$i-output/
     ./update.sh
