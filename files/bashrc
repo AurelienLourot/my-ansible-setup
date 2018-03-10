@@ -6,9 +6,9 @@ export TERM=xterm-256color
 
 # set -o vi  # unfortunately deactivates ctrl-l (clear)
 
-alias e='emacsclient.sh'
-alias ee='ee.sh'
-export EDITOR=~/bin/emacsclient.sh
+alias e='~/.emacs.d/bin/emacsclient.sh'
+alias ee='~/.emacs.d/bin/ee.sh'
+export EDITOR=~/.emacs.d/bin/emacsclient.sh
 
 alias ls='ls --color'
 alias ll='ls -alF'
