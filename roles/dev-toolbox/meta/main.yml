@@ -71,6 +71,13 @@ dependencies:
     tags: legacy
 
   - role: create-symlink
+    link_name: .vimrc
+    link_path: "{{ lookup('env', 'HOME') }}"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/vimrc"
+
+  - role: create-symlink
     link_name: .xbindkeysrc.scm
     link_path: "{{ lookup('env', 'HOME') }}"
     # Unfortunately we can't use 'role_path'
