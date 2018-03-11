@@ -238,22 +238,6 @@
     regexp: uuidgen-79cb621e-49f4-4662-bd6c-518e97ae97cb
     insertafter: uuidgen-20ce84f6-6313-4d61-8641-245c42741ffb
 
-- name: "Add workstation to hosts"
-  lineinfile:
-    dest: /etc/hosts
-    line: "10.111.8.108 workstation # uuidgen-4af6b62e-6972-4e3d-a7ab-9f220c6a861d"
-    regexp: uuidgen-4af6b62e-6972-4e3d-a7ab-9f220c6a861d
-  become: yes
-  become_method: sudo
-
-- name: "Add dell to hosts"
-  lineinfile:
-    dest: /etc/hosts
-    line: "10.111.8.224 dell # uuidgen-d59d7690-21b7-4cb1-b323-f8d8c79674ef"
-    regexp: uuidgen-d59d7690-21b7-4cb1-b323-f8d8c79674ef
-  become: yes
-  become_method: sudo
-
 #FIXME: this task is executed each time:
 # Note: you can list gedit settings with `gsettings list-recursively | grep -i gedit`.
 - name: Configure gedit
