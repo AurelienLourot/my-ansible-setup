@@ -8,6 +8,13 @@ dependencies:
     target: "{{ inventory_dir }}/files/gitconfig"
 
   - role: create-symlink
+    link_name: gitk
+    link_path: "{{ lookup('env', 'HOME') }}/.config/git"
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/gitk"
+
+  - role: create-symlink
     link_name: .gitignore
     link_path: "{{ lookup('env', 'HOME') }}"
     # Unfortunately we can't use 'role_path'
