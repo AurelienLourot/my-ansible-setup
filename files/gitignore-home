@@ -5,7 +5,6 @@
 /.compiz/session
 /.config/akonadi/*.dat
 /.config/dconf/user
-/.config/deluge/ipc/*.lock
 /.config/deluge/state
 /.config/deluge/*.conf~
 /.config/deluge/*.state
@@ -24,7 +23,6 @@
 /.fontconfig
 /.gconf/apps/gnome-terminal/profiles
 /.gem
-/.gksu.lock
 /.gmrun_history
 /.gnome/apps/chrome-*.desktop
 /.gnupg
@@ -123,6 +121,7 @@
 /VirtualBox VMs
 /workspace*
 .nfs*
+*.lock
 
 # chromium:
 *-journal
@@ -134,6 +133,7 @@ Bookmarks*
 BrowserMetrics*
 Cache
 Certificate Revocation Lists
+CertificateTransparency
 chrome_shutdown_ms.txt
 Cookies*
 Current Session
@@ -167,7 +167,7 @@ Origin Bound Certs
 Platform Notifications
 Preferences
 QuotaManager*
-Safe Browsing *
+Safe Browsing*
 Service Worker
 Session Storage
 Shockwave Flash
