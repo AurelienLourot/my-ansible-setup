@@ -8,7 +8,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/xinitrc"
-    tags: legacy
 
   - role: create-symlink
     link_name: start_icon.png
@@ -17,7 +16,6 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/start_icon.png"
     with_sudo: yes
-    tags: legacy
 
   - role: create-symlink
     link_name: autostart.desktop
@@ -33,35 +31,30 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/libfm"
-    tags: legacy
   - role: create-symlink
     link_name: pcmanfm
     link_path: "{{ lookup('env', 'HOME') }}/.config"
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/pcmanfm"
-    tags: legacy
   - role: create-symlink
     link_name: lxpanel
     link_path: "{{ lookup('env', 'HOME') }}/.config"
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/lxpanel"
-    tags: legacy
   - role: create-symlink
     link_name: lxterminal
     link_path: "{{ lookup('env', 'HOME') }}/.config"
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/lxterminal"
-    tags: legacy
   - role: create-symlink
     link_name: openbox
     link_path: "{{ lookup('env', 'HOME') }}/.config"
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/openbox"
-    tags: legacy
 
   - role: create-symlink
     link_name: lightdm-gtk-greeter-config-derivative
@@ -70,7 +63,6 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/lightdm-gtk-greeter-config-derivative"
     with_sudo: yes
-    tags: legacy
 
   - role: create-symlink
     link_name: logind.conf
@@ -79,7 +71,6 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/logind.conf"
     with_sudo: yes
-    tags: legacy
 
   - role: create-symlink
     link_name: locale
@@ -88,7 +79,6 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/locale"
     with_sudo: yes
-    tags: legacy
 
   - role: create-symlink
     link_name: autostart.sh
@@ -113,7 +103,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/deskopen.sh"
-    tags: legacy
 
   - role: create-symlink
     link_name: "%gconf.xml"
@@ -121,7 +110,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/gconf-apps.xml"
-    tags: legacy
 
   - role: create-symlink
     link_name: mount_encrypted_sdcard.sh

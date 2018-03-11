@@ -11,14 +11,12 @@
     name: lua5.2
   become: yes
   become_method: sudo
-  tags: legacy
 
 - name: Install recent devilspie2
   apt:
     deb: "{{ role_path }}/files/devilspie2_0.39-4_amd64.deb"
   become: yes
   become_method: sudo
-  tags: legacy
 
 - name: Install other APT packages
   apt:
@@ -58,7 +56,6 @@
   copy:
     src: "{{ inventory_dir }}/files/gnome-terminal"
     dest: "{{ lookup('env', 'HOME') }}/.gconf/apps"
-  tags: legacy
 
 - name: Install cryptsetup for mount_encrypted_sdcard.sh
   apt:

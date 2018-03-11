@@ -2,43 +2,35 @@
 - name: "Set gitplaceholder full path"
   set_fact:
     gitplaceholder_path: "{{ lookup('env', 'HOME') }}/.gitplaceholder"
-  tags: legacy
 
 - name: "Stat gitplaceholder"
   stat:
     path: "{{ gitplaceholder_path }}"
   register: gitplaceholder
-  tags: legacy
 
 - name: Touch gitplaceholder
   file:
     path: "{{ gitplaceholder_path }}"
     state: touch
   when: gitplaceholder.stat.exists == False
-  tags: legacy
 
 - name: "Stat git repo"
   stat:
     path: "{{ lookup('env', 'HOME') }}/.git"
   register: git_repo
-  tags: legacy
 
 #FIXME If aborted in the middle of these steps, ansible won't recover on next run:
 - name: Init git repo
   command: "git -C {{ lookup('env', 'HOME') }} init"
   when: git_repo.stat.exists == False
-  tags: legacy
 - name: Git add gitplaceholder
   command: "git -C {{ lookup('env', 'HOME') }} add .gitplaceholder"
   when: git_repo.stat.exists == False
-  tags: legacy
 - name: Set e-mail address for git
   command: "git -C {{ lookup('env', 'HOME') }} confemailhome"
   when: git_repo.stat.exists == False
-  tags: legacy
 - name: Initial commit
   command: "git -C {{ lookup('env', 'HOME') }} commit -m init"
   when: git_repo.stat.exists == False
-  tags: legacy
   notify:
     - Add all

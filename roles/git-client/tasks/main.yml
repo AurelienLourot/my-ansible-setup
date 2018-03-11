@@ -10,4 +10,3 @@
     url: https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
     dest: "{{ lookup('env', 'HOME') }}/bin/git-prompt.sh"
     mode: 0775
-  tags: legacy

@@ -13,7 +13,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/kwriterc"
-    tags: legacy
 
   - role: create-symlink
     link_name: .bash_profile
@@ -30,7 +29,6 @@ dependencies:
     line: "ansibleInventoryDir={{ inventory_dir }} # uuidgen-20ce84f6-6313-4d61-8641-245c42741ffb"
     line_description: args
     regexp: uuidgen-20ce84f6-6313-4d61-8641-245c42741ffb
-    tags: legacy
 
   - role: create-symlink
     link_name: inputrc
@@ -39,7 +37,6 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/inputrc"
     with_sudo: yes
-    tags: legacy
 
   - role: create-symlink
     link_name: config
@@ -68,7 +65,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/pylintrc"
-    tags: legacy
 
   - role: create-symlink
     link_name: .vimrc
@@ -90,7 +86,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/focusDesktopConsole.py"
-    tags: legacy
 
   - role: create-symlink
     link_name: focusDesktopConsole.sh
@@ -98,7 +93,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/focusDesktopConsole.sh"
-    tags: legacy
 
   - role: create-symlink
     link_name: DesktopConsole.lua
@@ -106,4 +100,3 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/DesktopConsole.lua"
-    tags: legacy

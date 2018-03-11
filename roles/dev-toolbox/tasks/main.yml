@@ -23,7 +23,6 @@
     - kompare
     - kdiff3
     - pandoc
-  tags: legacy
 
 - name: Install SCM clients via APT
   apt:
@@ -214,14 +213,12 @@
     requirements: "{{ role_path }}/files/uncommitted-2d5b199/requirements.txt"
   become: yes
   become_method: sudo
-  tags: legacy
 
 - name: Install uncommitted
   pip:
     name: "{{ role_path }}/files/uncommitted-2d5b199/uncommitted-1.6.tar.gz"
   become: yes
   become_method: sudo
-  tags: legacy
 
 - name: Clone find_forks
   git:
@@ -240,7 +237,6 @@
     line: "source ${ansibleInventoryDir}/files/bashrc # uuidgen-79cb621e-49f4-4662-bd6c-518e97ae97cb"
     regexp: uuidgen-79cb621e-49f4-4662-bd6c-518e97ae97cb
     insertafter: uuidgen-20ce84f6-6313-4d61-8641-245c42741ffb
-  tags: legacy
 
 - name: "Add workstation to hosts"
   lineinfile:
@@ -249,7 +245,6 @@
     regexp: uuidgen-4af6b62e-6972-4e3d-a7ab-9f220c6a861d
   become: yes
   become_method: sudo
-  tags: legacy
 
 - name: "Add dell to hosts"
   lineinfile:
@@ -258,7 +253,6 @@
     regexp: uuidgen-d59d7690-21b7-4cb1-b323-f8d8c79674ef
   become: yes
   become_method: sudo
-  tags: legacy
 
 #FIXME: this task is executed each time:
 # Note: you can list gedit settings with `gsettings list-recursively | grep -i gedit`.
@@ -267,4 +261,3 @@
   with_items:
     - org.gnome.gedit.preferences.editor create-backup-copy false
     - org.gnome.gedit.preferences.editor display-line-numbers true
-  tags: legacy

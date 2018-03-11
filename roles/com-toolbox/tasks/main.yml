@@ -18,10 +18,8 @@
     - unzip
     - libdbus-glib-1-2:i386
     - strace
-  tags: legacy
 
 - name: Create directory for jvpn
   file:
     path: "{{ lookup('env', 'HOME') }}/.juniper_networks/network_connect"
     state: directory
-  tags: legacy
