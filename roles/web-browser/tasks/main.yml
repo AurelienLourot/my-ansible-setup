@@ -1,10 +1,18 @@
 ---
-- name: Install APT packages
-  apt:
-    name: "{{ item }}"
+# See https://askubuntu.com/questions/510056/how-to-install-google-chrome
+- name: Add APT key for Chrome
+  shell: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
   become: yes
   become_method: sudo
-  with_items:
-    - chromium-browser
-    - firefox
-    - icedtea-plugin
+
+- name: Add APT source for Chrome
+  apt_repository:
+    repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+  become: yes
+  become_method: sudo
+
+- name: Install APT package
+  apt:
+    name: google-chrome-stable
+  become: yes
+  become_method: sudo

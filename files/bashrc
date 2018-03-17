@@ -39,11 +39,6 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_HIDE_IF_PWD_IGNORED=true
 PS1='\u@\h:\w\[\033[1;32m\]$(__git_ps1 " [%s]")\[\033[0m\]\$ '
 
-# Solves chromium input key bug:
-# https://code.google.com/p/chromium/issues/detail?id=360388
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-
 # Solves emacs accent bug:
 # https://bugs.launchpad.net/emacs-snapshot/+bug/1251176
 export XMODIFIERS=''
