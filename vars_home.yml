@@ -1,10 +1,6 @@
 ---
-git_has_p4: False
 adb_is_from_ppa: True
 has_spotify: True
 has_deluge: True
 keyboard_map: de,ar
 has_grive: True
-
-# Used in extra roles outside this repository:
-has_extra_bashrc: False
