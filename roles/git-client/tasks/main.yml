@@ -1,29 +1,7 @@
 ---
-# Note: using a single `apt` task with `with_items` doesn't work as it tries to install all packages
-#       at once instead of one after another.
-- name: Install git-man
+- name: Install APT packages
   apt:
-    deb: "{{ role_path }}/files/git-man_2.4.6-0ppa1-ubuntu14.10.1_all.deb"
-  become: yes
-  become_method: sudo
-- name: Install git
-  apt:
-    # git 2.7 breaks the "email = (none)" feature. See ongoing discussion at
-    # http://www.spinics.net/lists/git/msg267338.html
-    deb: "{{ role_path }}/files/git_2.4.6-0ppa1-ubuntu14.10.1_amd64.deb"
-  become: yes
-  become_method: sudo
-- name: Install git-gui and gitk
-  apt:
-    deb: "{{ item }}"
-  become: yes
-  become_method: sudo
-  with_items:
-    - "{{ role_path }}/files/git-gui_2.4.6-0ppa1-ubuntu14.10.1_all.deb"
-    - "{{ role_path }}/files/gitk_2.4.6-0ppa1-ubuntu14.10.1_all.deb"
-
-- name: Prevent git upgrade
-  command: "apt-mark hold {{ item }}"
+    name: "{{ item }}"
   become: yes
   become_method: sudo
   with_items:

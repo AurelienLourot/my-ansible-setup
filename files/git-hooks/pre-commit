@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+email=$(git config user.email)
+if [[ $email = *"@"* ]]; then
+  exit 0
+fi
+echo "'user.email' unset. Did you forget 'git confemailhome'?"
+exit 1
