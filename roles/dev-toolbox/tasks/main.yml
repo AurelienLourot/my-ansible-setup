@@ -208,15 +208,9 @@
   become: yes
   become_method: sudo
 
-- name: Install uncommitted's dependencies
-  pip:
-    requirements: "{{ role_path }}/files/uncommitted-2d5b199/requirements.txt"
-  become: yes
-  become_method: sudo
-
 - name: Install uncommitted
   pip:
-    name: "{{ role_path }}/files/uncommitted-2d5b199/uncommitted-1.6.tar.gz"
+    name: uncommitted
   become: yes
   become_method: sudo
 
