@@ -4,26 +4,19 @@ set -e
 
 ROOT_DIR=~/Documents/git/
 
-for i in chrome-web-store-cli dkb-visa my-gmaps quizler
+for repo in chrome-web-store-cli-output dkb-visa-output my-gmaps-output quizler-output google-drive todoist
 do
-    cd $ROOT_DIR/$i-output/
-    ./update.sh
+    echo "Fetching $repo..."
+    cd $ROOT_DIR/$repo/
+    ./.fetch.sh
+    echo
 done
-
-cd $ROOT_DIR/google-drive/grive/
-grive
 
 for repo in myberl.in mybeir.ut
 do
     cd $ROOT_DIR/$repo/snapshots/maps/thirdparty/
     ./download.sh
 done
-
-cd $ROOT_DIR/todoist/
-todoist s
-todoist l > todoist.txt
-git commit --allow-empty -am .
-git push
 
 SCRIPT_DIR=$(dirname $0)
 $SCRIPT_DIR/gitupdate.sh
