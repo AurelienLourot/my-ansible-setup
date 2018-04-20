@@ -2,20 +2,13 @@
 
 set -e
 
-ROOT_DIR=~/Documents/git/
-
-for repo in chrome-web-store-cli-output dkb-visa-output my-gmaps-output quizler-output google-drive todoist
+for i in $(find -L ~/Documents/git/ -maxdepth 2 -name .fetch.sh)
 do
-    echo "Fetching $repo..."
-    cd $ROOT_DIR/$repo/
-    ./.fetch.sh
-    echo
-done
-
-for repo in myberl.in mybeir.ut
-do
-    cd $ROOT_DIR/$repo/snapshots/maps/thirdparty/
-    ./download.sh
+  repo=$(dirname $i)
+  echo "Fetching $repo..."
+  cd $repo
+  ./.fetch.sh
+  echo
 done
 
 SCRIPT_DIR=$(dirname $0)
