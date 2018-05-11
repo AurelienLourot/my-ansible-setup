@@ -1,0 +1,3 @@
+[submodule "roles/desktop-env/files/xdotool"]
+	path = roles/desktop-env/files/xdotool
+	url = https://github.com/jordansissel/xdotool.git

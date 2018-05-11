@@ -39,10 +39,15 @@
     - libxinerama-dev
     - libxkbcommon-dev
 
+- name: Build xdotool
+  command: make
+  args:
+    chdir: "{{ role_path }}/files/xdotool"
+
 - name: Install xdotool
   command: make install
   args:
-    chdir: "{{ role_path }}/files/xdotool-2d7c391"
+    chdir: "{{ role_path }}/files/xdotool"
   become: yes
   become_method: sudo
 
