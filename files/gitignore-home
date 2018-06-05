@@ -51,6 +51,7 @@
 /.local/share/akonadi/*db_data
 /.local/share/akonadi/*.error*
 /.local/share/akonadi/socket-*
+/.local/share/Anki2/*/backups/
 /.local/share/applications/*.desktop
 /.local/share/contacts
 /.local/share/gvfs-metadata
@@ -67,12 +68,10 @@
 /.m2/repository
 /.macromedia
 /.mozilla/firefox
-/.msjnc.log
 /.node-gyp
 /.npm
 /.nv/GLCache
 /.p4tickets
-/.pip/pip.log
 /.python_history
 /.pulse
 /.qws
@@ -111,10 +110,12 @@
 /.wync2/logs
 /.Xauthority
 /.xsession-errors*
+/bin/go/
 /Calibre Library
 /C:\\nppdf32Log\\debuglog.txt
 /Downloads
 /Documents*
+/gocode/
 /My Digital Editions
 /tmp
 /trash
@@ -125,6 +126,8 @@
 
 # chromium:
 *-journal
+*.log
+*.old
 .org.chromium.Chromium.*
 Affiliation Database
 Application Cache
@@ -162,6 +165,7 @@ Local App Settings
 Local Extension Settings
 Local State
 Local Storage
+LOG
 Login Data
 Network Action Predictor
 Network Persistent State
