@@ -4,6 +4,7 @@
 /.cache
 /.compiz/session
 /.config/akonadi/*.dat
+/.config/configstore/update-notifier-npm.json
 /.config/dconf/user
 /.config/deluge/state
 /.config/deluge/*.conf~
@@ -101,6 +102,7 @@
 /.ssh/known_hosts*
 /.subversion
 /.thumbnails
+/.up/events
 /.tox
 /.VirtualBox/*.dat
 /.VirtualBox/*.log*
