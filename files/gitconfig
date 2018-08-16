@@ -10,7 +10,7 @@
 [alias]
         lol = log --graph --decorate --pretty=oneline --abbrev-commit
         lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-        rpupdate = remote update --prune
+        rpu = !git remote update --prune && git fetch --all --tags
         s = status
         branch-name = rev-parse --abbrev-ref HEAD
         remote-name = !git config branch.$(git branch-name).remote
