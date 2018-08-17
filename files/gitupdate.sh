@@ -8,7 +8,7 @@ for i in $(find -L $ROOT_DIR -name .git)
 do
     cd $(dirname $i)
     pwd
-    git rpupdate
+    git rpu
     result=$?
     if [[ result -ne "0" ]]
     then
