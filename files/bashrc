@@ -36,7 +36,21 @@ export GIT_PS1_SHOWUPSTREAM=auto
 export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_HIDE_IF_PWD_IGNORED=true
-PS1='\u@\h:\w\[\033[1;32m\]$(__git_ps1 " [%s]")\[\033[0m\]\$ '
+PS1='\u@\h:\w\[\033[1;32m\]$(__git_ps1 " [%s]")\[\033[0m\]'
+
+# Show exit status on prompt:
+function coloredExitStatus {
+  exitStatus=$?
+  if [ $exitStatus -eq 0 ]; then
+    echo -n $'\033[1;30m' # gray
+  else
+    echo -n $'\033[1;31m' # red
+  fi
+  echo -n " [$exitStatus]"
+  echo $'\033[m' # no color
+}
+PROMPT_COMMAND='coloredExitStatus=$(coloredExitStatus)'
+PS1="$PS1"'$coloredExitStatus\$ '
 
 # Solves emacs accent bug:
 # https://bugs.launchpad.net/emacs-snapshot/+bug/1251176
