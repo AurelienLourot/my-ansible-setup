@@ -46,7 +46,7 @@ function coloredExitStatus {
   else
     echo -n $'\033[1;31m' # red
   fi
-  echo -n " [$exitStatus]"
+  echo -n "[$exitStatus]"
   echo $'\033[m' # no color
 }
 PROMPT_COMMAND='coloredExitStatus=$(coloredExitStatus)'
