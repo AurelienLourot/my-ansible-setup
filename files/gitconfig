@@ -18,6 +18,7 @@
         updatetag = "!f() { git tag -f $1 && git push -f --tags; }; f"
         rmb = "!f() { git branch -D $2 && git push $1 :$2; }; f"
         confemailhome = config user.email "aurelien.lourot@gmail.com"
+        makeshallow = !git pull --depth 10 && git gc --prune=all
 
 [color]
         ui = true
