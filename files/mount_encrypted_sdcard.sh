@@ -24,7 +24,17 @@ then
   sudo mkfs.ext4 -m0 /dev/mapper/$name
 else
   echo "Opening existing formatted LUKS volume"
-  echo -n "$key" | sudo cryptsetup -q luksOpen $device $name
+  for attempt in 0 1; do
+    if ! echo -n "$key" | sudo cryptsetup -q luksOpen $device $name; then
+      # Probably already open, close and retry:
+      sudo cryptsetup -q luksClose $name
+    else
+      break
+    fi
+    if [ "$attempt" == "1" ]; then
+      exit 1
+    fi
+  done
 fi
 
 sudo mkdir -p $mountPoint
