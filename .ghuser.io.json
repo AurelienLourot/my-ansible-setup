@@ -1,5 +1,5 @@
 {
   "_comment": "Repo metadata for ghuser.io. See https://github.com/ghuser-io/ghuser.io/blob/master/docs/repo-settings.md",
-  "avatar_url": "https://rawgit.com/AurelienLourot/my-ansible-setup/master/thirdparty/ansible.png",
+  "avatar_url": "https://cdn.jsdelivr.net/gh/AurelienLourot/my-ansible-setup/thirdparty/ansible.png",
   "techs": ["Ansible"]
 }
