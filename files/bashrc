@@ -53,6 +53,14 @@ function setBashPrompt {
 }
 PROMPT_COMMAND=setBashPrompt
 
+# https://unix.stackexchange.com/a/1292/36560
+# Avoid duplicates
+export HISTCONTROL=ignoredups:erasedups
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
+# After each command, append to the history file and reread it
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
 # Solves emacs accent bug:
 # https://bugs.launchpad.net/emacs-snapshot/+bug/1251176
 export XMODIFIERS=''
