@@ -45,3 +45,6 @@
 
 [push]
         default = simple
+
+[pull]
+        ff = only
