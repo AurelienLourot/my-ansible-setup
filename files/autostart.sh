@@ -24,3 +24,5 @@ do
 done
 
 focusDesktopConsole.sh &
+
+xscreensaver &
