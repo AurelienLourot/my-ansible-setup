@@ -43,25 +43,6 @@
     - groovy
     - ruby-all-dev
 
-# Also necessary for installing RVM:
-- name: Install curl via APT
-  apt:
-    name: curl
-  become: yes
-  become_method: sudo
-
-# Ubuntu's ruby-rvm is broken,
-# see http://stackoverflow.com/questions/11521237/difficulties-after-installing-rvm
-#FIXME: these tasks are executed each time:
-- name: Add GPG key for RVM
-  command: gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-- name: Install RVM
-  shell: curl -sSL https://get.rvm.io | bash -s stable --ruby
-
-#FIXME: this task is executed each time:
-- name: Install jekyll in RVM
-  shell: bash -c ". ~/.bash_profile && gem install jekyll"
-
 - name: Install python via APT
   apt:
     name: "{{ item }}"
