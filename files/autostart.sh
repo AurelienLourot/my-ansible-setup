@@ -1,4 +1,12 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+exec > /tmp/autostart.log
+exec 2>&1
+set -x
+
+. ~/.bash_aliases
+shopt -s expand_aliases
+alias
 
 xhost +  # allows any user to start X apps
 
@@ -15,6 +23,10 @@ purgetrash.sh
 
 pgrep nm-applet || nm-applet &
 onboard &
+
+# Just in case we have a second screen plugged in, make sure we don't use it so that the desktop
+# consoles have the size of the first screen:
+undock
 
 devilspie2 &
 for i in $(seq 1 8)
