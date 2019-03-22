@@ -48,14 +48,14 @@ Fallback Encoding=ISO-8859-15
 [Kate Print Settings][HeaderFooter]
 FooterBackground=211,211,211
 FooterBackgroundEnabled=false
-FooterEnabled=true
+FooterEnabled=false
 FooterForeground=0,0,0
 FooterFormatCenter=
 FooterFormatLeft=
 FooterFormatRight=%U
 HeaderBackground=211,211,211
 HeaderBackgroundEnabled=false
-HeaderEnabled=true
+HeaderEnabled=false
 HeaderFooterFont=Ubuntu,11,-1,5,50,0,0,0,0,0
 HeaderForeground=0,0,0
 HeaderFormatCenter=%f
