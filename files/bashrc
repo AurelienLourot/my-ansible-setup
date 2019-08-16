@@ -52,3 +52,5 @@ export GOROOT=~/bin/go
 export GOPATH=~/gocode
 export PATH=$GOROOT/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
+
+export PATH=~/.rbenv/bin:$PATH
