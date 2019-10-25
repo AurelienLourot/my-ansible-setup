@@ -7,7 +7,7 @@ do
   repo=$(dirname $i)
   echo "Fetching $repo..."
   cd $repo
-  ./.fetch.sh
+  ./.fetch.sh "$@"
   echo
 done
 
