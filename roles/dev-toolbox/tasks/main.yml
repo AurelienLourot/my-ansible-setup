@@ -204,17 +204,6 @@
   become: yes
   become_method: sudo
 
-- name: Clone find_forks
-  git:
-    repo=https://github.com/frost-nzcr4/find_forks.git
-    dest="{{ lookup('env', 'HOME') }}/Documents/git/find_forks"
-
-- name: Install find_forks' dependencies
-  pip:
-    requirements: "{{ lookup('env', 'HOME') }}/Documents/git/find_forks/requirements-prod.txt"
-  become: yes
-  become_method: sudo
-
 - name: "Add source line to bashrc"
   lineinfile:
     dest: "{{ main_bashrc_on_host }}"
