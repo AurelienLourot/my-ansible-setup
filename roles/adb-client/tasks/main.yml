@@ -1,6 +1,0 @@
----
-- name: Install APT package for adb
-  apt:
-    name: android-tools-adb
-  become: yes
-  become_method: sudo
