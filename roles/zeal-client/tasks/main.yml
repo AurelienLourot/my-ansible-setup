@@ -18,7 +18,16 @@
   become: yes
   become_method: sudo
 
+- name: "Set zeal config dir path"
+  set_fact:
+    zeal_config_dir_path: "{{ lookup('env', 'HOME') }}/.config/Zeal"
+
+- name: "Make zeal config dir"
+  file:
+    path: "{{ zeal_config_dir_path }}"
+    state: directory
+
 - name: Deploy Zeal.conf
   template:
     src: "{{ role_path }}/files/Zeal.conf"
-    dest: "{{ lookup('env', 'HOME') }}/.config/Zeal/Zeal.conf"
+    dest: "{{ zeal_config_dir_path }}/Zeal.conf"
