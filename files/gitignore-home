@@ -9,6 +9,7 @@
 /.config/deluge/state
 /.config/deluge/*.conf~
 /.config/deluge/*.state
+/.config/hexchat/scrollback
 /.config/ibus/bus
 /.config/libreoffice/*/user/*/*cache
 /.config/pulse

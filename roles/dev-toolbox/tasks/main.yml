@@ -82,6 +82,12 @@
   become: yes
   become_method: sudo
 
+- name: Install IRC client via APT
+  apt:
+    name: hexchat
+  become: yes
+  become_method: sudo
+
 - name: Install other network clients via APT
   apt:
     name: "{{ item }}"
