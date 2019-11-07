@@ -32,6 +32,7 @@
   with_items:
     - mercurial
     - subversion
+    - bzr
 
 - name: Install interpreters via APT
   apt:
@@ -51,6 +52,7 @@
   with_items:
     - python-dev
     - python-setuptools # for easy_install among others
+    - python-testresources # for python-openstackclient
 
 - name: Install python linters via APT
   apt:
@@ -111,6 +113,11 @@
     - bash-completion
     - lib32ncurses5
     - pdfgrep
+    - tmux
+    - clusterssh
+    - w3m
+    - realpath
+    - rsync
 
 - name: Install kuser via APT
   apt:
@@ -128,6 +135,7 @@
     - locate
     - lsof
     - htop
+    - ethtool
 
 #FIXME: this is a workaround because Ansible's APT module is way too slow on an initial rollout.
 - name: Install maven stuff via APT
@@ -173,6 +181,7 @@
     - mcrypt
     - pwgen
     - xbacklight # for IntelliJ IDEA
+    - seahorse # for generating OpenPGP keys
 
 # This one is broken on Ubuntu 14.04, see
 # http://stackoverflow.com/questions/27341064/how-do-i-fix-importerror-cannot-import-name-incompleteread
