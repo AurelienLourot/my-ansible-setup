@@ -11,5 +11,5 @@ $ sudo ./install_ansible.sh
 
 ## Setup machines
 
-I usually call the `setup_*.sh` scripts (without `sudo`) which are simple wrappers around
+I usually call the `setup.sh` script (without `sudo`) which is a simple wrapper around
 `ansible-playbook`.

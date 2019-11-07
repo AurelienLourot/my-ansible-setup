@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-# Generic ansible-playbook wrapper implementing the `setup_*.sh` scripts.
+# Generic ansible-playbook wrapper.
 #
 # args:
 #   additional `ansible-playbook` args

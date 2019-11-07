@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-setxkbmap {{ keyboard_map }}
+setxkbmap de,ar
 
 # Map Caps Lock to F13:
 xmodmap -e "keycode 66 = F13"
