@@ -10,8 +10,17 @@
     - git-gui
     - gitk
 
+- name: "Set bin dir full path"
+  set_fact:
+    bin_fullpath: "{{ lookup('env', 'HOME') }}/bin"
+
+- name: "Make bin dir"
+  file:
+    path: "{{ bin_fullpath }}"
+    state: directory
+
 - name: Download latest git-prompt.sh
   get_url:
     url: https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-    dest: "{{ lookup('env', 'HOME') }}/bin/git-prompt.sh"
+    dest: "{{ bin_fullpath }}/git-prompt.sh"
     mode: 0775
