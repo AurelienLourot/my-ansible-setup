@@ -86,13 +86,6 @@ dependencies:
     target: "{{ inventory_dir }}/files/xbindkeysrc.scm"
 
   - role: create-symlink
-    link_name: focusDesktopConsole.py
-    link_path: "{{ lookup('env', 'HOME') }}/bin"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/focusDesktopConsole.py"
-
-  - role: create-symlink
     link_name: focusDesktopConsole.sh
     link_path: "{{ lookup('env', 'HOME') }}/bin"
     # Unfortunately we can't use 'role_path'

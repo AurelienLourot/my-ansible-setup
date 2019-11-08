@@ -1,20 +1,7 @@
 ---
 - name: Add APT source for avidemux
   apt_repository:
-    repo: deb http://archive.ubuntu.com/ubuntu/ precise main restricted universe multiverse
-  become: yes
-  become_method: sudo
-
-- name: Add APT key for vlc-plugin-libde265
-  apt_key:
-    keyserver: keyserver.ubuntu.com
-    id: C6610628A707A7E5E391D27A9641080A705C2B92
-  become: yes
-  become_method: sudo
-
-- name: Add APT source for vlc-plugin-libde265
-  apt_repository:
-    repo: deb http://ppa.launchpad.net/strukturag/libde265/ubuntu trusty main
+    repo: deb [trusted=yes] http://archive.ubuntu.com/ubuntu/ precise main restricted universe multiverse
   become: yes
   become_method: sudo
 
@@ -26,12 +13,10 @@
   with_items:
     - avidemux
     - vlc
-    - vlc-plugin-libde265 # for playing HEVC files
     - transcode
     - kolourpaint4
     - gwenview
     - imagemagick
-    - ksnapshot
     - gimp
     - calibre
     - audacity

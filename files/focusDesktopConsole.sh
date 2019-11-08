@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
-# Loop calling the python script periodically
-while true
-do
-    focusDesktopConsole.py
-    sleep 1
+while true; do
+  echo "----"
+  desktopId=$(xdotool get_desktop)
+  numWindows=$(xdotool search --desktop $desktopId --class . | wc -l)
+  echo "Current desktop $desktopId has $numWindows window(s)."
+  if [[ "$numWindows" == "1" ]]
+  then
+    xdotool search --desktop $desktopId --class . windowfocus
+  fi
+  sleep 1
 done

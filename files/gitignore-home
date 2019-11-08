@@ -113,12 +113,11 @@
 /.wync2/logs
 /.Xauthority
 /.xsession-errors*
-/bin/go/
 /Calibre Library
 /C:\\nppdf32Log\\debuglog.txt
 /Downloads
 /Documents*
-/gocode/
+/go/
 /My Digital Editions
 /tmp
 /trash

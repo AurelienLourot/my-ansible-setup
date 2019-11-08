@@ -22,17 +22,20 @@ sudo cron
 purgetrash.sh
 
 pgrep nm-applet || nm-applet &
-onboard &
 
 # Just in case we have a second screen plugged in, make sure we don't use it so that the desktop
 # consoles have the size of the first screen:
 undock
 
-devilspie2 &
 for i in $(seq 1 8)
 do
   createDesktopConsole.sh $i
-  sleep 0.1 # otherwise might be too fast for devilspie
+done
+for i in $(seq 1 5) # devilspie2 isn't reliable so we have to try several times
+do
+  devilspie2 &
+  sleep 1
+  killall devilspie2
 done
 
 focusDesktopConsole.sh &

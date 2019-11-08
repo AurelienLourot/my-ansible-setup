@@ -51,7 +51,6 @@
   become_method: sudo
   with_items:
     - python-dev
-    - python-setuptools # for easy_install among others
     - python-testresources # for python-openstackclient
 
 - name: Install python linters via APT
@@ -116,14 +115,7 @@
     - tmux
     - clusterssh
     - w3m
-    - realpath
     - rsync
-
-- name: Install kuser via APT
-  apt:
-    name: kuser
-  become: yes
-  become_method: sudo
 
 - name: Install other system tools via APT
   apt:
@@ -155,23 +147,6 @@
   become: yes
   become_method: sudo
 
-- name: Install ansible-doc via APT
-  apt:
-    name: ansible-doc
-  become: yes
-  become_method: sudo
-
-# ia32-libs has been replaced by the following packages:
-- name: Install ia32-libs via APT
-  apt:
-    name: "{{ item }}"
-  become: yes
-  become_method: sudo
-  with_items:
-    - lib32z1
-    - lib32ncurses5
-    - lib32bz2-1.0
-
 - name: Install other APT packages
   apt:
     name: "{{ item }}"
@@ -183,18 +158,9 @@
     - xbacklight # for IntelliJ IDEA
     - seahorse # for generating OpenPGP keys
 
-# This one is broken on Ubuntu 14.04, see
-# http://stackoverflow.com/questions/27341064/how-do-i-fix-importerror-cannot-import-name-incompleteread
-- name: Remove broken pip
+- name: Install pip
   apt:
     name: python-pip
-    state: absent
-  become: yes
-  become_method: sudo
-
-- name: Install pip
-  easy_install:
-    name: pip
   become: yes
   become_method: sudo
 

@@ -1,4 +1,11 @@
 ---
+- name: Install lubuntu-gtk-core
+  apt:
+    name: lubuntu-gtk-core
+  become: yes
+  become_method: sudo
+  ignore_errors: yes # Not available on Ubuntu 14.04
+
 #FIXME: this is a workaround because Ansible's APT module is way too slow on an initial rollout.
 - name: Install lubuntu-desktop via APT
   # Without 'noninteractive', lightdm's installation hangs on "Preconfiguring packages ...":
@@ -28,7 +35,6 @@
     - network-manager-gnome
     - network-manager-openvpn-gnome
     - xscreensaver
-    - wmctrl
 
 - name: Install xdotool's dependencies
   apt:
@@ -57,11 +63,6 @@
     src: "{{ role_path }}/files/setxkb.sh"
     dest: "{{ lookup('env', 'HOME') }}/bin/setxkb.sh"
     mode: 0775
-
-- name: Deploy gnome-terminal configuration
-  copy:
-    src: "{{ inventory_dir }}/files/gnome-terminal"
-    dest: "{{ lookup('env', 'HOME') }}/.gconf/apps"
 
 - name: Install cryptsetup for mount_encrypted_sdcard.sh
   apt:
