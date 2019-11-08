@@ -26,6 +26,7 @@
   with_items:
     - gnome-control-center
     - network-manager-gnome
+    - network-manager-openvpn-gnome
     - xscreensaver
     - wmctrl
 
