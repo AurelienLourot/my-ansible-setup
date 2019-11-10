@@ -63,6 +63,13 @@ dependencies:
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/lightdm-gtk-greeter-config-derivative"
     with_sudo: yes
+  - role: create-symlink
+    link_name: 12-lightdm-ansible.conf
+    link_path: /etc/lightdm/lightdm.conf.d
+    # Unfortunately we can't use 'role_path'
+    # because of https://github.com/ansible/ansible/issues/10374 :
+    target: "{{ inventory_dir }}/files/12-lightdm-ansible.conf"
+    with_sudo: yes
 
   - role: create-symlink
     link_name: logind.conf
