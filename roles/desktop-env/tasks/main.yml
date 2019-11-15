@@ -25,6 +25,19 @@
   become: yes
   become_method: sudo
 
+- name: Install xscreensaver
+  apt:
+    name: xscreensaver
+  become: yes
+  become_method: sudo
+
+- name: Remove gnome-screensaver
+  apt:
+    name: gnome-screensaver
+    state: absent
+  become: yes
+  become_method: sudo
+
 - name: Install other APT packages
   apt:
     name: "{{ item }}"
@@ -34,7 +47,6 @@
     - gnome-control-center
     - network-manager-gnome
     - network-manager-openvpn-gnome
-    - xscreensaver
 
 - name: Install xdotool's dependencies
   apt:
