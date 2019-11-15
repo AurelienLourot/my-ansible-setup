@@ -2,7 +2,7 @@
 
 set -e
 
-for i in $(find -L ~/Documents/git/ -maxdepth 2 -name .fetch.sh)
+for i in $(find -L ~/Documents/git/ -maxdepth 3 -name .fetch.sh)
 do
   repo=$(dirname $i)
   echo "Fetching $repo..."
