@@ -9,6 +9,7 @@ alias trsh='bash ${ansibleInventoryDir}/files/trash.sh'
 alias gitupdate='bash ${ansibleInventoryDir}/files/gitupdate.sh'
 alias update='bash ${ansibleInventoryDir}/files/update.sh'
 alias homesize='bash ${ansibleInventoryDir}/files/homesize.sh'
+alias memtop='atop -pMl'
 alias find_forks='python ~/Documents/git/find_forks'
 
 alias dock='xrandr --output HDMI1 --rotate normal --mode 1920x1200 && xrandr --output eDP1 --off'
