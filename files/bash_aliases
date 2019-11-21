@@ -17,3 +17,5 @@ alias dockAtWork='xrandr --output HDMI1 --rotate normal --mode 1920x1080 && xran
 alias undock='xrandr --output eDP1 --mode 1366x768 && xrandr --output HDMI1 --off'
 alias night='xrandr --output eDP1 --brightness .4 --gamma .6:.6:.6'
 alias day='xrandr --output eDP1 --brightness 1 --gamma 1:1:1'
+
+alias scan='scanimage --resolution=600 --format=png > ~/Downloads/scan.png'
