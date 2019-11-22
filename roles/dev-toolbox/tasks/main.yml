@@ -135,12 +135,6 @@
   become: yes
   become_method: sudo
 
-- name: Install MongoDB via APT
-  apt:
-    name: mongodb
-  become: yes
-  become_method: sudo
-
 - name: Install gmrun via APT
   apt:
     name: gmrun
