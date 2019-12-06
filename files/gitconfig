@@ -21,6 +21,9 @@
         confemailwork = config user.email "aurelien.lourot@canonical.com"
         makeshallow = !git pull --depth 10 && git gc --prune=all
 
+[url "git+ssh://aurelien-lourot@git.launchpad.net/"]
+        insteadof = lp:
+
 [color]
         ui = true
 
