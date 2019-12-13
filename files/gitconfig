@@ -23,6 +23,8 @@
 
 [url "git+ssh://aurelien-lourot@git.launchpad.net/"]
         insteadof = lp:
+[url "https://AurelienLourot@github.com/"]
+        insteadof = gh:
 
 [color]
         ui = true
