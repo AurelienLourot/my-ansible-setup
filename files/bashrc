@@ -1,6 +1,3 @@
-# args:
-#   ansibleInventoryDir
-
 HISTSIZE=5000
 export TERM=xterm-256color
 
