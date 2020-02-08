@@ -43,6 +43,6 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a"
 export XMODIFIERS=''
 
 # User-specific commands:
-export PATH="~/bin:${PATH}"
+export PATH="~/bin:~/Documents/git/bin:${PATH}"
 
 export PATH="~/go/bin:${PATH}"
