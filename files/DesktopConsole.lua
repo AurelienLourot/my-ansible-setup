@@ -9,6 +9,6 @@ for i=1,8 do
         set_skip_pager(true)
         set_skip_tasklist(true)
         set_window_type("WINDOW_TYPE_UTILITY")
-        set_window_geometry2(50,50,screen_width - 100,screen_height - 100)
+        set_window_geometry2(20,20,screen_width -  40,screen_height - 40)
     end
 end
