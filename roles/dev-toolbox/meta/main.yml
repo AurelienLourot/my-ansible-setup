@@ -84,24 +84,3 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/xbindkeysrc.scm"
-
-  - role: create-symlink
-    link_name: focusDesktopConsole.sh
-    link_path: "{{ lookup('env', 'HOME') }}/bin"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/focusDesktopConsole.sh"
-
-  - role: create-symlink
-    link_name: createDesktopConsole.sh
-    link_path: "{{ lookup('env', 'HOME') }}/bin"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/createDesktopConsole.sh"
-
-  - role: create-symlink
-    link_name: DesktopConsole.lua
-    link_path: "{{ lookup('env', 'HOME') }}/.config/devilspie2"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/DesktopConsole.lua"

@@ -27,17 +27,4 @@ pgrep nm-applet || nm-applet &
 # consoles have the size of the first screen:
 undock
 
-for i in $(seq 1 8)
-do
-  createDesktopConsole.sh $i
-done
-for i in $(seq 1 5) # devilspie2 isn't reliable so we have to try several times
-do
-  devilspie2 &
-  sleep 1
-  killall devilspie2
-done
-
-focusDesktopConsole.sh &
-
 xscreensaver &
