@@ -112,7 +112,6 @@
     - bash-completion
     - lib32ncurses5
     - pdfgrep
-    - tmux
     - clusterssh
     - w3m
     - rsync
