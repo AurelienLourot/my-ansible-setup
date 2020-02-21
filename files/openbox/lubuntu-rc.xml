@@ -367,7 +367,19 @@
     <!-- Launch a terminal on Ctrl + Alt + T-->
     <keybind key="C-A-T">
       <action name="Execute">
-        <command>x-terminal-emulator</command>
+        <command>gnome-terminal --maximize</command>
+      </action>
+    </keybind>
+    <!-- Launch a browser on Ctrl + Alt + B-->
+    <keybind key="C-A-B">
+      <action name="Execute">
+        <command>google-chrome</command>
+      </action>
+    </keybind>
+    <!-- Launch an editor on Ctrl + Alt + E-->
+    <keybind key="C-A-E">
+      <action name="Execute">
+        <command>/home/lourot/.emacs.d/bin/emacsclient.sh -c</command>
       </action>
     </keybind>
     <!-- Launch a filemanager on Ctrl + Alt + D-->
@@ -405,12 +417,12 @@
     <!-- Keybinding for terminal button-->
     <keybind key="XF86WWW">
       <action name="Execute">
-        <command>x-terminal-emulator</command>
+        <command>gnome-terminal --maximize</command>
       </action>
     </keybind>
     <keybind key="XF86Terminal">
       <action name="Execute">
-        <command>x-terminal-emulator</command>
+        <command>gnome-terminal --maximize</command>
       </action>
     </keybind>
     <!-- Keybinding for calculator button-->
