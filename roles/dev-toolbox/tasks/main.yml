@@ -112,6 +112,7 @@
     - bash-completion
     - lib32ncurses5
     - pdfgrep
+    - byobu
     - clusterssh
     - w3m
     - rsync
