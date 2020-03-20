@@ -27,6 +27,8 @@
         insteadof = gh:
 [url "ssh://ionos/home/lourot/Documents/git/"]
         insteadof = ionos:
+[url "ssh://ubuntu@bastion/home/ubuntu/Documents/git/"]
+        insteadof = bastion:
 
 [color]
         ui = true
