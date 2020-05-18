@@ -73,7 +73,6 @@
 /.node-gyp
 /.npm
 /.nv/GLCache
-/.p4tickets
 /.python_history
 /.pulse
 /.qws

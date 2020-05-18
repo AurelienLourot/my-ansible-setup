@@ -42,10 +42,6 @@
 [merge]
         tool = kdiff3
 
-[git-p4]
-        detectRename = true
-        allowSubmit = master
-
 [core]
         whitespace = trailing-space,space-before-tab
         hooksPath = ~/.git-hooks
