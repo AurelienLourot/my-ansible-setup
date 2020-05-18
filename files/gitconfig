@@ -2,6 +2,9 @@
         name = Aurelien Lourot
         email = (none)
 
+[gitreview]
+        username = lourot
+
 [format]
         subjectprefix = PATCH
         suffix = .txt
