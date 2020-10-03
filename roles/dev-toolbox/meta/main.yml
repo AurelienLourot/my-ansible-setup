@@ -3,7 +3,6 @@ dependencies:
   - role: add-sudoers
   - role: git-client
   - role: link-documents
-  - role: zeal-client
 
   - role: create-symlink
     link_name: kwriterc
