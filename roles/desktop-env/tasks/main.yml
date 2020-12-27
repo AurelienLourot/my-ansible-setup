@@ -35,6 +35,8 @@
     - gnome-control-center
     - network-manager-gnome
     - network-manager-openvpn-gnome
+    - arandr
+    - onboard
 
 - name: Install xdotool's dependencies
   apt:
@@ -45,6 +47,8 @@
     - libxtst-dev
     - libxinerama-dev
     - libxkbcommon-dev
+    - make
+    - gcc
 
 - name: Build xdotool
   command: make

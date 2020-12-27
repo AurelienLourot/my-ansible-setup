@@ -10,3 +10,4 @@
     - kcalc
     - okular
     - poppler-utils # for pdfunite
+    - cups-pdf
