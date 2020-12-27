@@ -50,8 +50,7 @@
   become: yes
   become_method: sudo
   with_items:
-    - python-dev
-    - python-testresources # for python-openstackclient
+    - python3-dev
 
 - name: Install python linters via APT
   apt:
@@ -59,9 +58,8 @@
   become: yes
   become_method: sudo
   with_items:
-    - pychecker
     - pylint
-    - pyflakes
+    - pyflakes3
 
 #FIXME: this is a workaround because Ansible's APT module is way too slow on an initial rollout.
 - name: Install LaTeX stuff via APT
@@ -110,7 +108,7 @@
     - mc
     - pv
     - bash-completion
-    - lib32ncurses5
+    - lib32ncurses6
     - pdfgrep
     - byobu
     - clusterssh
@@ -154,7 +152,7 @@
 
 - name: Install pip
   apt:
-    name: python-pip
+    name: python3-pip
   become: yes
   become_method: sudo
 

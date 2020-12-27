@@ -6,7 +6,6 @@
   become_method: sudo
   with_items:
     - vlc
-    - transcode
     - kolourpaint4
     - gwenview
     - imagemagick

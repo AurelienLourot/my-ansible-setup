@@ -6,4 +6,3 @@
   become_method: sudo
   with_items:
     - acpi
-    - gpointing-device-settings
