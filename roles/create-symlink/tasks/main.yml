@@ -32,8 +32,6 @@
     path: "{{ backup_fullpath }}"
   register: backup_file
 
-#TODO: instead of making a backup ourselves, implement a 'backup' option in
-#      ansible-modules-core/files/file.py like in copy.py .
 #FIXME: I can't get 'become: "{{ with_sudo | bool }}"' to work, that's why it's all duplicated here:
 - name: "Backup {{ link_name }}"
   copy:
