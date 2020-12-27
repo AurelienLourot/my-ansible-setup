@@ -1,8 +1,0 @@
----
-dependencies:
-  - role: create-symlink
-    link_name: core.conf
-    link_path: "{{ lookup('env', 'HOME') }}/.config/deluge"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/deluge-core.conf"

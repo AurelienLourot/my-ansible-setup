@@ -1,6 +1,0 @@
----
-- name: Install APT package
-  apt:
-    name: deluge
-  become: yes
-  become_method: sudo
