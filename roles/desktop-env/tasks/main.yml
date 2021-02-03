@@ -1,18 +1,4 @@
 ---
-- name: Install lubuntu-gtk-core
-  apt:
-    name: lubuntu-gtk-core
-  become: yes
-  become_method: sudo
-  ignore_errors: yes # Not available on Ubuntu 14.04
-
-#FIXME: this is a workaround because Ansible's APT module is way too slow on an initial rollout.
-- name: Install lubuntu-desktop via APT
-  # Without 'noninteractive', lightdm's installation hangs on "Preconfiguring packages ...":
-  shell: DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --no-upgrade lubuntu-desktop | ts '%F %T' >> ansible_apt.log
-  become: yes
-  become_method: sudo
-
 - name: Install xscreensaver
   apt:
     name: xscreensaver

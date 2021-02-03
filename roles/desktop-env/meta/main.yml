@@ -3,13 +3,6 @@ dependencies:
   - role: add-sudoers
 
   - role: create-symlink
-    link_name: .xinitrc
-    link_path: "{{ lookup('env', 'HOME') }}"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/xinitrc"
-
-  - role: create-symlink
     link_name: .xscreensaver
     link_path: "{{ lookup('env', 'HOME') }}"
     # Unfortunately we can't use 'role_path'
@@ -30,53 +23,6 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/autostart.desktop"
-
-  #FIXME: a 'with_items' loop would be better, however not trivial with roles:
-  - role: create-symlink
-    link_name: libfm
-    link_path: "{{ lookup('env', 'HOME') }}/.config"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/libfm"
-  - role: create-symlink
-    link_name: pcmanfm
-    link_path: "{{ lookup('env', 'HOME') }}/.config"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/pcmanfm"
-  - role: create-symlink
-    link_name: lxpanel
-    link_path: "{{ lookup('env', 'HOME') }}/.config"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/lxpanel"
-  - role: create-symlink
-    link_name: lxterminal
-    link_path: "{{ lookup('env', 'HOME') }}/.config"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/lxterminal"
-  - role: create-symlink
-    link_name: openbox
-    link_path: "{{ lookup('env', 'HOME') }}/.config"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/openbox"
-
-  - role: create-symlink
-    link_name: lightdm-gtk-greeter-config-derivative
-    link_path: /etc/alternatives
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/lightdm-gtk-greeter-config-derivative"
-    with_sudo: yes
-  - role: create-symlink
-    link_name: 12-lightdm-ansible.conf
-    link_path: /etc/lightdm/lightdm.conf.d
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/12-lightdm-ansible.conf"
-    with_sudo: yes
 
   - role: create-symlink
     link_name: logind.conf

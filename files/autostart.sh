@@ -21,10 +21,4 @@ sudo cron
 
 purgetrash.sh
 
-pgrep nm-applet || nm-applet &
-
-# Just in case we have a second screen plugged in, make sure we don't use it so that the desktop
-# consoles have the size of the first screen:
-undock
-
 xscreensaver &
