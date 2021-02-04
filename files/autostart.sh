@@ -20,5 +20,3 @@ sudo /usr/local/bin/mount_sdcard.sh
 sudo cron
 
 purgetrash.sh
-
-xscreensaver &

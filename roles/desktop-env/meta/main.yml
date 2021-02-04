@@ -3,13 +3,6 @@ dependencies:
   - role: add-sudoers
 
   - role: create-symlink
-    link_name: .xscreensaver
-    link_path: "{{ lookup('env', 'HOME') }}"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/xscreensaver"
-
-  - role: create-symlink
     link_name: start_icon.png
     link_path: "/opt/configurelinux"
     # Unfortunately we can't use 'role_path'
