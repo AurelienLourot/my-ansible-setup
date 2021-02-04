@@ -1,9 +1,14 @@
 ---
 - name: Install emacs via APT
   apt:
-    name: emacs
+    name: "{{ item }}"
   become: yes
   become_method: sudo
+  with_items:
+    - emacs
+    # For https://github.com/leoliu/ggtags#install-global-and-plugins :
+    - exuberant-ctags
+    - libncurses5-dev
 
 - name: Install other text editors via APT
   apt:
@@ -33,6 +38,7 @@
     - mercurial
     - subversion
     - bzr
+    - qbzr
 
 - name: Install interpreters via APT
   apt:
@@ -51,6 +57,8 @@
   become_method: sudo
   with_items:
     - python3-dev
+    - python3.8-dev
+    - ipython3
 
 - name: Install python linters via APT
   apt:
@@ -61,15 +69,20 @@
     - pylint
     - pyflakes3
 
+- name: Install tools to contribute to Ubuntu
+  apt:
+    name: "{{ item }}"
+  become: yes
+  become_method: sudo
+  with_items:
+    - devscripts # for rmadison
+    - ubuntu-dev-tools # for pull-lp-source
+    - cloud-image-utils # https://serverfault.com/a/940686/212098
+    - git-buildpackage
+
 #FIXME: this is a workaround because Ansible's APT module is way too slow on an initial rollout.
 - name: Install LaTeX stuff via APT
   shell: apt-get install -y --no-install-recommends --no-upgrade texlive-latex-base texlive-latex-extra pgf | ts '%F %T' >> ansible_apt.log
-  become: yes
-  become_method: sudo
-
-- name: Install FTP client via APT
-  apt:
-    name: gftp
   become: yes
   become_method: sudo
 
@@ -79,7 +92,7 @@
   become: yes
   become_method: sudo
 
-- name: Install other network clients via APT
+- name: Install other networking tools via APT
   apt:
     name: "{{ item }}"
   become: yes
@@ -87,9 +100,13 @@
   with_items:
     - telnet
     - sshpass
+    - sshuttle
     - mtr
     - dnsutils # for dig
+    - gftp
     - tftp
+    - net-tools # for ifconfig
+    - ipmitools
 
 - name: Install gnome-terminal via APT
   apt:
@@ -106,6 +123,7 @@
   with_items:
     - trash-cli
     - mc
+    - ncdu
     - pv
     - bash-completion
     - lib32ncurses6
@@ -114,6 +132,7 @@
     - clusterssh
     - w3m
     - rsync
+    - curl
 
 - name: Install other system tools via APT
   apt:

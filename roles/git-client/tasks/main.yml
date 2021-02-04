@@ -9,6 +9,7 @@
     - git
     - git-gui
     - gitk
+    - git-review
 
 - name: "Set bin dir full path"
   set_fact:
