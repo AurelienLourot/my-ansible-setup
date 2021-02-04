@@ -22,7 +22,6 @@
     - network-manager-gnome
     - network-manager-openvpn-gnome
     - arandr
-    - onboard
 
 - name: Install xdotool's dependencies
   apt:
