@@ -1,7 +1,5 @@
 ---
 dependencies:
-  - role: link-documents
-
   - role: create-symlink
     link_name: spotify
     link_path: "{{ lookup('env', 'HOME') }}/.cache"

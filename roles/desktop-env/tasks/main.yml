@@ -39,9 +39,3 @@
     src: "{{ role_path }}/files/setxkb.sh"
     dest: "{{ lookup('env', 'HOME') }}/bin/setxkb.sh"
     mode: 0775
-
-- name: Install cryptsetup for mount_encrypted_sdcard.sh
-  apt:
-    name: cryptsetup
-  become: yes
-  become_method: sudo

@@ -1,7 +1,5 @@
 ---
 dependencies:
-  - role: add-sudoers
-
   - role: create-symlink
     link_name: start_icon.png
     link_path: "/opt/configurelinux"
@@ -56,11 +54,3 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/deskopen.sh"
-
-  - role: create-symlink
-    link_name: mount_encrypted_sdcard.sh
-    link_path: "{{ lookup('env', 'HOME') }}/bin"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/mount_encrypted_sdcard.sh"
-    with_sudo: yes
