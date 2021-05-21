@@ -1,6 +1,0 @@
----
-- name: Add APT partner source
-  apt_repository:
-    repo: deb http://archive.canonical.com/ubuntu/ trusty partner
-  become: yes
-  become_method: sudo

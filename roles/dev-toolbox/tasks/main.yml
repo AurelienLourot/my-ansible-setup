@@ -38,7 +38,6 @@
     - mercurial
     - subversion
     - bzr
-    - qbzr
 
 - name: Install interpreters via APT
   apt:
@@ -106,7 +105,6 @@
     - gftp
     - tftp
     - net-tools # for ifconfig
-    - ipmitools
 
 - name: Install gnome-terminal via APT
   apt:
