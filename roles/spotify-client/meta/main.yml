@@ -1,7 +1,0 @@
----
-dependencies:
-  - role: create-symlink
-    link_name: spotify
-    link_path: "{{ lookup('env', 'HOME') }}/.cache"
-    target: "{{ lookup('env', 'HOME') }}/Documents/cache/spotify"
-    backup: no
