@@ -11,8 +11,3 @@ alias gitreview-setup='bash ${ansibleInventoryDir}/files/gitreview-setup.sh'
 alias homesize='bash ${ansibleInventoryDir}/files/homesize.sh'
 alias memtop='atop -pMl'
 alias find_forks='python ~/Documents/git/find_forks'
-
-alias night='xrandr --output eDP1 --brightness .4 --gamma .6:.6:.6'
-alias day='xrandr --output eDP1 --brightness 1 --gamma 1:1:1'
-
-alias scan='scanimage --resolution=600 --format=png > ~/Downloads/scan.png'
