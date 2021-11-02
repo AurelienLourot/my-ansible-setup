@@ -29,8 +29,8 @@
         insteadof = lp:
 [url "https://AurelienLourot@github.com/"]
         insteadof = gh:
-[url "ssh://ionos/home/lourot/Documents/git/"]
-        insteadof = ionos:
+[url "ssh://ubuntu@aws/home/ubuntu/Documents/git/"]
+        insteadof = aws:
 [url "ssh://ubuntu@bastion/home/ubuntu/Documents/git/"]
         insteadof = bastion:
 
