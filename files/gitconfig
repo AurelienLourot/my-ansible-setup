@@ -33,6 +33,8 @@
         insteadof = aws:
 [url "ssh://ubuntu@bastion/home/ubuntu/Documents/git/"]
         insteadof = bastion:
+[url "ssh://laconia/home/lourot/Documents/git/"]
+        insteadof = laconia:
 
 [color]
         ui = true
