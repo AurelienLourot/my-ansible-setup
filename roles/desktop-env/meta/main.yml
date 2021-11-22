@@ -1,14 +1,6 @@
 ---
 dependencies:
   - role: create-symlink
-    link_name: start_icon.png
-    link_path: "/opt/configurelinux"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/start_icon.png"
-    with_sudo: yes
-
-  - role: create-symlink
     link_name: autostart.desktop
     link_path: "{{ lookup('env', 'HOME') }}/.config/autostart"
     # Unfortunately we can't use 'role_path'
