@@ -21,7 +21,26 @@ function setPythonVenv {
   fi
 }
 
-# Show git status and exit status on prompt:
+# https://github.com/akermu/emacs-libvterm#shell-side-configuration
+vterm_printf(){
+    if [ -n "$TMUX" ] && ([ "${TERM%%-*}" = "tmux" ] || [ "${TERM%%-*}" = "screen" ] ); then
+        # Tell tmux to pass the escape sequences through
+        printf "\ePtmux;\e\e]%s\007\e\\" "$1"
+    elif [ "${TERM%%-*}" = "screen" ]; then
+        # GNU screen (screen, screen-256color, screen-256color-bce)
+        printf "\eP\e]%s\007\e\\" "$1"
+    else
+        printf "\e]%s\e\\" "$1"
+    fi
+}
+
+# https://github.com/akermu/emacs-libvterm#directory-tracking-and-prompt-tracking
+vterm_prompt_end(){
+    vterm_printf "51;A$(whoami)@$(hostname):$(pwd)"
+}
+
+# Show python venv, git status and exit status on prompt. Also pass the current
+# directory up to emacs:
 function setBashPrompt {
   exitStatus=$?
 
@@ -37,6 +56,8 @@ function setBashPrompt {
   else
     exitStatusColor=$RED
   fi
+
+  vterm_prompt_end
 
   PS1='${pythonVenv}\u@\h:\w\[\033[1;32m\]$(__git_ps1 " [%s]")\[\033[0m\]\[$exitStatusColor\][$exitStatus]\[$NOCOLOR\]\$ '
 }
