@@ -51,7 +51,7 @@ set indexcirclecolor #50fa7b
 set circlecolors {#282a36 #bd93f9 #44475a #bd93f9 #bd93f9}
 set linkfgcolor #bd93f9
 set circleoutlinecolor #44475a
-set diffbgcolors {{#342a36} #283636}
+set diffbgcolors {#282a36 #282a36}
 set web_browser xdg-open
 set geometry(main) 1920x998+0+0
 set geometry(state) normal
