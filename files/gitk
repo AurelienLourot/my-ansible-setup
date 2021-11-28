@@ -51,12 +51,14 @@ set indexcirclecolor #50fa7b
 set circlecolors {#282a36 #bd93f9 #44475a #bd93f9 #bd93f9}
 set linkfgcolor #bd93f9
 set circleoutlinecolor #44475a
-set geometry(main) 1362x687+0+0
+set diffbgcolors {{#342a36} #283636}
+set web_browser xdg-open
+set geometry(main) 1920x998+0+0
 set geometry(state) normal
-set geometry(topwidth) 1360
-set geometry(topheight) 264
-set geometry(pwsash0) "811 1"
-set geometry(pwsash1) "1145 1"
-set geometry(botwidth) 910
-set geometry(botheight) 411
+set geometry(topwidth) 1918
+set geometry(topheight) 493
+set geometry(pwsash0) "782 1"
+set geometry(pwsash1) "1144 1"
+set geometry(botwidth) 1101
+set geometry(botheight) 493
 set permviews {}
