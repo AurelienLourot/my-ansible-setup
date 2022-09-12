@@ -29,6 +29,8 @@
         insteadof = gh:
 [url "ssh://ubuntu@aws/home/ubuntu/Documents/git/"]
         insteadof = aws:
+[url "ssh://bitnami@wordpress.lourot.dev/home/bitnami/Documents/git/"]
+        insteadof = wordpress:
 
 [color]
         ui = true
