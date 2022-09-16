@@ -21,7 +21,7 @@
         pushforce = !REMOTE=$(git remote-name) && git push $REMOTE :$(git branch-name) && git push --set-upstream $REMOTE $(git branch-name)
         updatetag = "!f() { git tag -f $1 && git push -f --tags; }; f"
         rmb = "!f() { git branch -D $2 && git push $1 :$2; }; f"
-        confemailhome = config user.email "aurelien.lourot@gmail.com"
+        confemailhome = config user.email "software@lourot.dev"
         makeshallow = !git pull --depth 10 && git gc --prune=all
         ditch = !git add -A && git commit -m ditched && git reset --hard HEAD~1
 
