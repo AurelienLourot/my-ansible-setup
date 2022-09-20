@@ -6,6 +6,7 @@
   become_method: sudo
   with_items:
     - emacs
+    - elpa-php-mode
     # For https://github.com/leoliu/ggtags#install-global-and-plugins :
     - exuberant-ctags
     - libncurses5-dev
