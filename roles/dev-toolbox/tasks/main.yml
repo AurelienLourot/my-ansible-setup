@@ -49,6 +49,7 @@
     - rhino
     - groovy
     - ruby-all-dev
+    - php-cli
 
 - name: Install python via APT
   apt:
