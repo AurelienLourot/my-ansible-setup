@@ -50,6 +50,7 @@
     - groovy
     - ruby-all-dev
     - php-cli
+    - php-xml # for https://github.com/WordPress/WordPress-Coding-Standards
 
 - name: Install python via APT
   apt:
