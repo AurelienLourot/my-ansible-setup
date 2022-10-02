@@ -143,6 +143,7 @@
     - w3m
     - rsync
     - curl
+    - xmlstarlet
 
 - name: Install other system tools via APT
   apt:
@@ -178,6 +179,9 @@
     - pwgen
     - xbacklight # for IntelliJ IDEA
     - seahorse # for generating OpenPGP keys
+    # See https://wiki.ubuntuusers.de/ExifTool/
+    - libimage-exiftool-perl
+    - perl-doc
 
 - name: Install pip
   apt:
