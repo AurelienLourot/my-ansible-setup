@@ -29,6 +29,7 @@
     - kompare
     - kdiff3
     - pandoc
+    - okteta
 
 - name: Install SCM clients via APT
   apt:
