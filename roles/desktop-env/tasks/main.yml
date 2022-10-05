@@ -9,6 +9,7 @@
     - network-manager-gnome
     - network-manager-openvpn-gnome
     - arandr
+    - font-manager
 
 - name: Install xdotool's dependencies
   apt:
