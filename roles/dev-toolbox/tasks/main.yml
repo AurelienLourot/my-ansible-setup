@@ -52,6 +52,7 @@
     - ruby-all-dev
     - php-cli
     - php-xml # for https://github.com/WordPress/WordPress-Coding-Standards
+    - php-imagick
 
 - name: Install dependency managers via APT
   apt:
