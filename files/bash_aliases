@@ -9,6 +9,5 @@ alias trsh='bash ${ansibleInventoryDir}/files/trash.sh'
 alias gitupdate='bash ${ansibleInventoryDir}/files/gitupdate.sh'
 alias homesize='bash ${ansibleInventoryDir}/files/homesize.sh'
 alias memtop='atop -pMl'
-alias find_forks='python ~/Documents/git/find_forks'
 
 alias yarn='yarnpkg'
