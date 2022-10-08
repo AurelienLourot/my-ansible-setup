@@ -67,13 +67,3 @@ dependencies:
     # Unfortunately we can't use 'role_path'
     # because of https://github.com/ansible/ansible/issues/10374 :
     target: "{{ inventory_dir }}/files/vimrc"
-
-  # See:
-  # * https://stackoverflow.com/questions/22710964/emacs24-not-rendering-fonts-properly
-  # * https://wiki.archlinux.org/title/Font_configuration
-  - role: create-symlink
-    link_name: .Xresources
-    link_path: "{{ lookup('env', 'HOME') }}"
-    # Unfortunately we can't use 'role_path'
-    # because of https://github.com/ansible/ansible/issues/10374 :
-    target: "{{ inventory_dir }}/files/Xresources"
