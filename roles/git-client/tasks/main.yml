@@ -10,6 +10,7 @@
     - git-gui
     - gitk
     - git-review
+    - git-filter-repo
 
 - name: "Set bin dir full path"
   set_fact:
