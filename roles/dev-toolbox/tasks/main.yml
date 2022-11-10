@@ -61,6 +61,7 @@
   become_method: sudo
   with_items:
     - yarnpkg
+    - npm
     - composer
 
 - name: Install python via APT
