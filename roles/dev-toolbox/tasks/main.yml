@@ -49,6 +49,7 @@
   with_items:
     - rhino
     - groovy
+    - node-typescript # for tsc
     - ruby-all-dev
     - php-cli
     - php-xml # for https://github.com/WordPress/WordPress-Coding-Standards
