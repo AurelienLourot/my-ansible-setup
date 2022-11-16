@@ -2,6 +2,9 @@
         name = Aurelien Lourot
         email = (none)
 
+[init]
+        defaultBranch = main
+
 [gitreview]
         username = lourot
 
