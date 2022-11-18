@@ -17,7 +17,10 @@ set showlocalchanges 1
 set datetimeformat {%Y-%m-%d %H:%M:%S}
 set limitdiffs 1
 set uicolor #44475a
-set want_ttk 0
+
+# See https://stackoverflow.com/questions/68103101/how-to-fix-the-gitk-error-expected-integer-but-got
+set want_ttk 1
+
 set bgcolor #282a36
 set fgcolor #f8f8f2
 set uifgcolor #f8f8f2
