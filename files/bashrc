@@ -3,7 +3,7 @@ export TERM=xterm-256color
 
 # set -o vi  # unfortunately deactivates ctrl-l (clear)
 
-export EDITOR=~/.emacs.d/bin/emacsclient.sh
+export EDITOR="code --wait --reuse-window"
 
 . ~/bin/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=true
