@@ -146,6 +146,7 @@
     - rsync
     - curl
     - xmlstarlet
+    - gcp
 
 - name: Install other system tools via APT
   apt:
