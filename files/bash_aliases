@@ -1,6 +1,3 @@
-alias e='~/.emacs.d/bin/emacsclient.sh'
-alias ee='~/.emacs.d/bin/ee.sh'
-
 alias ls='ls --color'
 alias ll='ls -alF'
 
