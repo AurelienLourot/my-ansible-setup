@@ -8,3 +8,5 @@ alias homesize='bash ${ansibleInventoryDir}/files/homesize.sh'
 alias memtop='atop -pMl'
 
 alias yarn='yarnpkg'
+
+alias codehere='code . && exit'
