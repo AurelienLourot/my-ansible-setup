@@ -28,7 +28,7 @@
         makeshallow = !git pull --depth 10 && git gc --prune=all
         ditch = !git add -A && git commit -m ditched && git reset --hard HEAD~1
 
-[url "https://AurelienLourot@github.com/"]
+[url "ssh://git@github.com/"]
         insteadof = gh:
 [url "ssh://ubuntu@aws/home/ubuntu/Documents/git/"]
         insteadof = aws:
