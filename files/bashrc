@@ -54,3 +54,6 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a"
 export PATH="~/bin:~/Documents/git/bin:${PATH}"
 
 export PATH="~/go/bin:${PATH}"
+
+# See https://super-unix.com/ubuntu/ubuntu-how-to-set-up-ccache/
+export PATH="/usr/lib/ccache:${PATH}"
