@@ -186,6 +186,12 @@
   become: yes
   become_method: sudo
 
+- name: Install black
+  pip:
+    name: black
+  become: yes
+  become_method: sudo
+
 - name: "Add source line to bashrc"
   lineinfile:
     dest: "{{ main_bashrc_on_host }}"
