@@ -50,6 +50,7 @@
   become_method: sudo
   with_items:
     - composer
+    - python3-pip
 
 - name: Install python via APT
   apt:
@@ -147,6 +148,8 @@
     - lsof
     - htop
     - ethtool
+    - gparted
+    - partitionmanager
 
 #FIXME: this is a workaround because Ansible's APT module is way too slow on an initial rollout.
 - name: Install maven stuff via APT
@@ -173,12 +176,6 @@
     # See https://wiki.ubuntuusers.de/ExifTool/
     - libimage-exiftool-perl
     - perl-doc
-
-- name: Install pip
-  apt:
-    name: python3-pip
-  become: yes
-  become_method: sudo
 
 - name: Install uncommitted
   pip:
