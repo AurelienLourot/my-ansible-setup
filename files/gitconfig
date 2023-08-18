@@ -16,7 +16,7 @@
 [alias]
         lol = log --graph --decorate --pretty=oneline --abbrev-commit
         lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-        rpu = !git remote update --prune && git fetch --all --tags
+        rpu = !git remote update --prune && git fetch --all --tags --force
         rpull = !git rpu && git pull
         s = status
         branch-name = rev-parse --abbrev-ref HEAD
