@@ -176,6 +176,7 @@
     # See https://wiki.ubuntuusers.de/ExifTool/
     - libimage-exiftool-perl
     - perl-doc
+    - i7z # monitor intel cpu freq
 
 - name: Install uncommitted
   pip:
