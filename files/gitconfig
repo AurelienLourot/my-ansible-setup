@@ -27,6 +27,7 @@
         confemailhome = config user.email "software@lourot.dev"
         makeshallow = !git pull --depth 10 && git gc --prune=all
         ditch = !git add -A && git commit -m ditched && git reset --hard HEAD~1
+        cleanignored = !git clean -Xdf
 
 [url "ssh://git@github.com/"]
         insteadof = gh:
