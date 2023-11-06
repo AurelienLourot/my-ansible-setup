@@ -26,9 +26,6 @@
 - name: Git add gitplaceholder
   command: "git -C {{ lookup('env', 'HOME') }} add .gitplaceholder"
   when: git_repo.stat.exists == False
-- name: Set e-mail address for git
-  command: "git -C {{ lookup('env', 'HOME') }} confemailhome"
-  when: git_repo.stat.exists == False
 - name: Initial commit
   command: "git -C {{ lookup('env', 'HOME') }} commit -m init"
   when: git_repo.stat.exists == False
