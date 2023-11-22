@@ -10,6 +10,7 @@
     - gwenview
     - imagemagick
     - gimp
+    - inkscape  # vector-based drawing program
     - calibre
     - audacity
     - k3b
