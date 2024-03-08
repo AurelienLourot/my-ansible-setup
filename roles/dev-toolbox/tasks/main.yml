@@ -52,6 +52,7 @@
   with_items:
     - composer
     - python3-pip
+    - cargo
 
 - name: Install python via APT
   apt:
